@@ -6,7 +6,7 @@
     @include('front.partials.indexBox')
     <div class="row">
         <div class="col-xs-3">
-            @include('front.partials.leftSideBarWForm')
+            {{--@include('front.partials.leftSidebarWForm')--}}
         </div>
         <div class="col-xs-9 index-page">
                 <div class="content-wrapper">P
