@@ -9,7 +9,7 @@
             @include('front.partials.leftSideBarWForm')
         </div>
         <div class="col-xs-9 index-page">
-                <div class="content-wrapper">
+                <div class="content-wrapper">P
                     <div class="row">
                         <div class="title">
                             <p>投資移民</p>
