@@ -1,0 +1,7 @@
+{{HTML::style(asset('components/bootstrap/dist/css/bootstrap.min.css'))}}
+{{HTML::style(asset('components/bootstrap/dist/css/bootstrap-theme.min.css'))}}
+{{HTML::style(asset('components/sb-admin-2/css/plugins/metisMenu/metisMenu.min.css'))}}
+{{HTML::style(asset('components/sb-admin-2/css/sb-admin-2.css'))}}
+{{HTML::style(asset('components/fontawesome/css/font-awesome.min.css'))}}
+{{HTML::style(asset('assets/css/myStyle.css'))}}
+{{HTML::script(asset('assets/js/modernizr-2.6.2-respond-1.1.0.min.js'))}}
