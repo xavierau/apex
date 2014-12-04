@@ -81,11 +81,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/.gitignore">
+          <file leaf-file-name="app.php" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/app/config/app.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.05461165" vertical-offset="0" max-vertical-offset="824">
-                  <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+                <state vertical-scroll-proportion="0.27272728" vertical-offset="0" max-vertical-offset="3075">
+                  <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
                   <folding />
                 </state>
               </provider>
@@ -182,7 +182,6 @@
         <option value="$PROJECT_DIR$/app/Acme/Models/Page.php" />
         <option value="$PROJECT_DIR$/app/Acme/Repositories/EloquentPages.php" />
         <option value="$PROJECT_DIR$/composer.json" />
-        <option value="$PROJECT_DIR$/app/config/app.php" />
         <option value="$PROJECT_DIR$/tests/functional/loginCept.php" />
         <option value="$PROJECT_DIR$/app/views/hello.blade.php" />
         <option value="$PROJECT_DIR$/app/views/front/partials/blocks/MainMenu.blade.php" />
@@ -211,6 +210,7 @@
         <option value="$PROJECT_DIR$/app/views/front/pages/index.blade.php" />
         <option value="$PROJECT_DIR$/app/config/database.php" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/app/config/app.php" />
       </list>
     </option>
   </component>
@@ -976,14 +976,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/app.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8054245" vertical-offset="2227" max-vertical-offset="3075">
-          <caret line="194" column="25" selection-start-line="194" selection-start-column="25" selection-end-line="194" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/config/database.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5129717" vertical-offset="450" max-vertical-offset="1950">
@@ -1027,6 +1019,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.16383494" vertical-offset="0" max-vertical-offset="824">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/public/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-9.375" vertical-offset="0" max-vertical-offset="750">
@@ -1035,10 +1035,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/app/config/app.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.05461165" vertical-offset="0" max-vertical-offset="824">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.27272728" vertical-offset="0" max-vertical-offset="3075">
+          <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
           <folding />
         </state>
       </provider>
