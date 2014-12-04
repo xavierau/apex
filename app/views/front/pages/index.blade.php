@@ -6,10 +6,10 @@
     @include('front.partials.indexBox')
     <div class="row">
         <div class="col-xs-3">
-            {{--@include('front.partials.leftSidebarWForm')--}}
+            @include('front.partials.leftSidebarForm')
         </div>
         <div class="col-xs-9 index-page">
-                <div class="content-wrapper">P
+                <div class="content-wrapper">
                     <div class="row">
                         <div class="title">
                             <p>投資移民</p>
