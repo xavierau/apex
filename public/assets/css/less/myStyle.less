@@ -1,6 +1,8 @@
 //Define variables
 @total-width: 1180px;
-@scalFactor:@total-width/1180;
+//@scalFactor:@total-width/1180;
+@scalFactor:1;
+
 @standard_font_size : 1em;
 
 @oneForth : @total-width/4;
@@ -11,7 +13,7 @@
 @header_logo_height:93px;
 @header_logo_width:90px;
 
-@navbar_height: @scalFactor*40px;
+@navbar_height: 40px;
 @navbar_li_width: 80px;
 @navbar_li_height: 40px;
 
@@ -111,7 +113,9 @@ body{
 //-------------------------------------
 
   // top navigation bar
+
   .navbar-default{
+
     width: @total-width;
     border-radius: 0;
     box-shadow: none;
@@ -119,6 +123,11 @@ body{
     background: @theme_color_green none;
     color: white;
     height: @navbar_height;
+
+    .navbar-nav{
+      float: left;
+      margin:0;
+    }
 
     *{
       color:white;
@@ -132,14 +141,16 @@ body{
       min-width: @navbar_li_width;
       height: @navbar_li_height;
       border-right: solid #ffffff 1px;
+      float: left;
     }
 
     a{
         position: relative;
         min-width: @navbar_li_width;
         white-space:nowrap;
-        padding-right: @standard_font_size;
-        padding-top: 1.1*@standard_font_size;
+        padding-right: 16px;
+        padding-bottom: 15px;
+        padding-top: 20px;
         text-align: right;
 
         .triangle {
