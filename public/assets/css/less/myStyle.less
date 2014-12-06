@@ -508,7 +508,6 @@ body{
     margin-right: 20px;
     margin-bottom: 15px;
     top:-60px;
-    min-height: 858px;
     background-size: contain;
     background-position: bottom right;
     background-repeat: no-repeat;
@@ -518,6 +517,37 @@ body{
       //    margin-left: 10px;
       //    margin-right: 10px;
       padding:10px;
+      padding-bottom: 380px;
+
+      img.heading-img{
+        padding-bottom: 15px;
+      }
+      .countries-icon{
+        img{
+          padding-bottom: 20px;
+        }
+      }
+
+      .content-item {
+        margin: 15px;
+        padding-bottom: 5px;
+        border-bottom: solid 1px @theme_color_green;
+        .col-xs-3{
+          margin-left:0;
+          padding-left:0;
+          img{
+            margin-top: 10px
+          }
+        }
+        .col-xs-9{
+          margin-right:0;
+          padding-right:0;
+        }
+        .heading{
+          padding-bottom: 5px;
+          border-bottom: solid 1px @theme_color_green;
+        }
+      }
     }
 
     iframe{

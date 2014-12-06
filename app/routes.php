@@ -28,6 +28,27 @@
         return View::make("front.pages.about");
     }]);
 
+    Route::get('education', ["as" => "education", function () {
+        return View::make("front.pages.education");
+    }]);
+
+    Route::get('property_investment', ["as" => "property_investment", function () {
+        return View::make("front.pages.property");
+    }]);
+
+    Route::get('rental_management', ["as" => "rental_management", function () {
+        return View::make("front.pages.property");
+    }]);
+    Route::get('news', ["as" => "news", function () {
+        return View::make("front.pages.news");
+    }]);
+    Route::get('partners', ["as" => "partners", function () {
+        return View::make("front.pages.partners");
+    }]);
+    Route::get('immigration', ["as" => "immigration", function () {
+        return View::make("front.pages.immigration");
+    }]);
+
 // Event::listen('illuminate.query', function($query){
 // 	var_dump($query);
 // });
