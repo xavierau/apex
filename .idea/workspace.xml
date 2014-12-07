@@ -25,12 +25,42 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="app.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="app.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/config/app.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.91017175" vertical-offset="1096" max-vertical-offset="3075">
+            <state vertical-scroll-proportion="-28.708334" vertical-offset="1096" max-vertical-offset="3075">
               <caret line="119" column="60" selection-start-line="119" selection-start-column="60" selection-end-line="119" selection-end-column="60" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="header.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/front/partials/header.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.01981506" vertical-offset="0" max-vertical-offset="757">
+              <caret line="1" column="59" selection-start-line="1" selection-start-column="59" selection-end-line="1" selection-end-column="59" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="myStyle.less" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/assets/css/less/myStyle.less">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-4.2" vertical-offset="0" max-vertical-offset="5745">
+              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+              <folding>
+                <element signature="e#852#2172#0" expanded="false" />
+                <element signature="e#4871#5569#0" expanded="false" />
+                <element signature="e#6152#6467#0" expanded="false" />
+                <element signature="e#6993#7240#0" expanded="false" />
+                <element signature="e#7260#7523#0" expanded="false" />
+                <element signature="e#7582#8035#0" expanded="false" />
+                <element signature="e#8093#9948#0" expanded="false" />
+                <element signature="e#10010#10124#0" expanded="false" />
+                <element signature="e#12327#12588#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -89,7 +119,6 @@
         <option value="$PROJECT_DIR$/app/views/front/partials/indexBanner.blade.php" />
         <option value="$PROJECT_DIR$/app/views/front/partials/indexLeftSideBar.blade.php" />
         <option value="$PROJECT_DIR$/app/views/front/partials/blocks/contactform.blade.php" />
-        <option value="$PROJECT_DIR$/app/views/front/partials/header.blade.php" />
         <option value="$PROJECT_DIR$/app/Acme/Composers/front/MainMenuComposer.php" />
         <option value="$PROJECT_DIR$/app/views/front/partials/blocks/css.blade.php" />
         <option value="$PROJECT_DIR$/app/views/front/partials/footer.blade.php" />
@@ -110,7 +139,6 @@
         <option value="$PROJECT_DIR$/app/views/front/partials/head.blade.php" />
         <option value="$PROJECT_DIR$/app/views/front/partials/leftSideBarAll.blade.php" />
         <option value="$PROJECT_DIR$/app/routes.php" />
-        <option value="$PROJECT_DIR$/public/assets/css/less/myStyle.less" />
         <option value="$PROJECT_DIR$/app/config/app.php" />
         <option value="$PROJECT_DIR$/app/views/front/pages/news.blade.php" />
         <option value="$PROJECT_DIR$/app/views/front/pages/property.blade.php" />
@@ -118,6 +146,8 @@
         <option value="$PROJECT_DIR$/app/views/front/pages/immigration.blade.php" />
         <option value="$PROJECT_DIR$/app/views/front/pages/partners.blade.php" />
         <option value="$PROJECT_DIR$/app/views/front/partials/leftSidebarAll.blade.php" />
+        <option value="$PROJECT_DIR$/public/assets/css/less/myStyle.less" />
+        <option value="$PROJECT_DIR$/app/views/front/partials/header.blade.php" />
       </list>
     </option>
   </component>
@@ -817,14 +847,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/front/partials/header.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3537736" vertical-offset="0" max-vertical-offset="848">
-          <caret line="20" column="0" selection-start-line="11" selection-start-column="37" selection-end-line="20" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/front/partials/leftSidebarForm.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.017688679" vertical-offset="0" max-vertical-offset="848">
@@ -854,24 +876,6 @@
         <state vertical-scroll-proportion="0.5350066" vertical-offset="0" max-vertical-offset="1260">
           <caret line="36" column="8" selection-start-line="36" selection-start-column="8" selection-end-line="36" selection-end-column="8" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/assets/css/less/myStyle.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.57859975" vertical-offset="3507" max-vertical-offset="5730">
-          <caret line="526" column="28" selection-start-line="526" selection-start-column="28" selection-end-line="526" selection-end-column="28" />
-          <folding>
-            <element signature="e#849#2169#0" expanded="false" />
-            <element signature="e#4868#5566#0" expanded="false" />
-            <element signature="e#6149#6464#0" expanded="false" />
-            <element signature="e#6990#7237#0" expanded="false" />
-            <element signature="e#7257#7520#0" expanded="false" />
-            <element signature="e#7579#8032#0" expanded="false" />
-            <element signature="e#8090#9945#0" expanded="false" />
-            <element signature="e#10007#10121#0" expanded="false" />
-            <element signature="e#12324#12585#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -925,16 +929,42 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/front/partials/leftSidebarAll.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.099075295" vertical-offset="0" max-vertical-offset="757">
-          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="757">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="5" selection-end-column="6" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/config/app.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.91017175" vertical-offset="1096" max-vertical-offset="3075">
+        <state vertical-scroll-proportion="-28.708334" vertical-offset="1096" max-vertical-offset="3075">
           <caret line="119" column="60" selection-start-line="119" selection-start-column="60" selection-end-line="119" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/assets/css/less/myStyle.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.2" vertical-offset="0" max-vertical-offset="5745">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding>
+            <element signature="e#852#2172#0" expanded="false" />
+            <element signature="e#4871#5569#0" expanded="false" />
+            <element signature="e#6152#6467#0" expanded="false" />
+            <element signature="e#6993#7240#0" expanded="false" />
+            <element signature="e#7260#7523#0" expanded="false" />
+            <element signature="e#7582#8035#0" expanded="false" />
+            <element signature="e#8093#9948#0" expanded="false" />
+            <element signature="e#10010#10124#0" expanded="false" />
+            <element signature="e#12327#12588#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/front/partials/header.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.01981506" vertical-offset="0" max-vertical-offset="757">
+          <caret line="1" column="59" selection-start-line="1" selection-start-column="59" selection-end-line="1" selection-end-column="59" />
           <folding />
         </state>
       </provider>

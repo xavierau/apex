@@ -1,10 +1,5 @@
 <header>
-    <img class="logo" src="{{asset('assets/imgs/logo-bg.png')}}"/>
-    <div class="company-name">
-        <p>德盛(大中華)有限公司</p>
-        <p>APEX CONSULTANCY</p>
-        <p>(Greater China) Limited</p>
-    </div>
+    <img class="logo" src="{{asset('assets/imgs/logo-bg.jpg')}}"/>
     <div class="lang-links pull-right">
         <ol class="breadcrumb pull-right">
           <li><a href="#">繁體</a></li>
