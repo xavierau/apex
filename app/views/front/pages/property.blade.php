@@ -6,7 +6,7 @@
         <img src="{{asset('assets/imgs/property_banner.jpg')}}" alt=""/>
     </div>
     <div class="col-xs-3">
-        @include("...partials.leftSidebarAll")
+        @include("front.partials.leftSidebarAll")
     </div>
     <div class="col-xs-9">
         <section class="content" style="background-image: url('{{asset('assets/imgs/property_background.jpg')}}')">
