@@ -24,10 +24,11 @@ class MainMenuComposer
 			return $this->createMenu();
 		});
 
+    // $menu = $this->createMenu();
 		$view->with('menu', $menu);
 	}
 
-	public function createMenu()
+	private function createMenu()
     {
         $links = $this->Page->getAllPages();
 
@@ -42,11 +43,12 @@ class MainMenuComposer
             $data[$element->id]["url"] = $element->url;
         }
 
+        return $result = $this->menuAssemble($link, $data);
+	}
 
+  // fech through first set $link
 
-        // fech through first set $link
-
-        function menuAssemble($links_dependency, $links_data, $index=0)
+        private function menuAssemble($links_dependency, $links_data, $index=0)
         {
           $html="";
           foreach ($links_dependency[$index] as $element) {
@@ -61,7 +63,7 @@ class MainMenuComposer
                   $html .= '<ul class="dropdown-menu" role="menu">';
                   $html .= menuAssemble($links_dependency, $links_data, $element);
               }else{
-                $html .= '<li class="'.$class.'"><span class="triangle"></span><a href="'.$links_data[$element]['url'].'">'.$links_data[$element]["title"].'</a>';
+                $html .= '<li class="'.$class.'"><span class="triangle"></span><a href="'.route($links_data[$element]['url']).'">'.$links_data[$element]["title"].'</a>';
               }
                $html .= "</li>";
           }
@@ -69,9 +71,6 @@ class MainMenuComposer
 
           return $html;
         }
-
-        return $result = menuAssemble($link, $data);
-	}
 
 
 }

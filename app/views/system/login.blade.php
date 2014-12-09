@@ -13,6 +13,13 @@
                     <h3 class="panel-title">Please Login</h3>
                 </div>
                 <div class="panel-body">
+                @if (count($errors))
+                    <div class="alert alert-danger" role="alert">
+                      <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                      <span class="sr-only">Error:</span>
+                      {{$errors->first()}}
+                    </div>
+                @endif
                 {{Form::open()}}
                      {{-- Email Form Input--}}
                      <div class="form-group">

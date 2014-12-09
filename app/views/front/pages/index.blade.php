@@ -68,24 +68,24 @@
                         </div>
                         <div class="col-xs-2">
                                 <ul class="country-list">
-                                    <li><a href=""><p>香港</p><img src="{{asset('assets/imgs/hongkong-sm.jpg')}}" alt=""/></a></li>
-                                    <li><a href=""><p>英國</p><img src="{{asset('assets/imgs/england-sm.jpg')}}" alt=""/></a></li>
-                                    <li><a href=""><p>美國</p><img src="{{asset('assets/imgs/usa-sm.jpg')}}" alt=""/></a></li>
-                                    <li><a href=""><p>愛爾蘭</p><img src="{{asset('assets/imgs/ireland-sm.jpg')}}" alt=""/></a></li>
-                                    <li><a href=""><p>澳洲</p><img src="{{asset('assets/imgs/australia-sm.jpg')}}" alt=""/></a></li>
-                                    <li><a href=""><p>聖基茨</p><img src="{{asset('assets/imgs/kitts-sm.jpg')}}" alt=""/></a></li>
-                                    <li><a href=""><p>韓國</p><img src="{{asset('assets/imgs/korea-sm.jpg')}}" alt=""/></a></li>
-                                    <li><a href=""><p>匈牙利</p><img src="{{asset('assets/imgs/huguary-sm.jpg')}}" alt=""/></a></li>
-                                    <li><a href=""><p>台灣</p><img src="{{asset('assets/imgs/taiwan-sm.jpg')}}" alt=""/></a></li>
-                                    <li><a href=""><p>葡萄牙</p><img src="{{asset('assets/imgs/portugal-sm.jpg')}}" alt=""/></a></li>
-                                    <li><a href=""><p>馬來西亞</p><img src="{{asset('assets/imgs/malaysia-sm.jpg')}}" alt=""/></a></li>
-                                    <li><a href=""><p>西班牙</p><img src="{{asset('assets/imgs/spain-sm.jpg')}}" alt=""/></a></li>
-                                    <li><a href=""><p>新加坡</p><img src="{{asset('assets/imgs/singapore-sm.jpg')}}" alt=""/></a></li>
-                                    <li><a href=""><p>意大利</p><img src="{{asset('assets/imgs/italy-sm.jpg')}}" alt=""/></a></li>
-                                    <li><a href=""><p>加拿大 </p><img src="{{asset('assets/imgs/canada-sm.jpg')}}" alt=""/></a></li>
-                                    <li><a href=""><p>荷蘭</p><img src="{{asset('assets/imgs/holland-sm.jpg')}}" alt=""/></a></li>
-                                    <li><a href=""><p>塞班島</p><img src="{{asset('assets/imgs/saipan-sm.jpg')}}" alt=""/></a></li>
-                                    <li><a href=""><p>浦路斯</p><img src="{{asset('assets/imgs/cyprus-sm.jpg')}}" alt=""/></a></li>
+                                    <li><a href="{{route('immigration','hongkong')}}"><p>香港</p><img src="{{asset('assets/imgs/hongkong-sm.jpg')}}" alt=""/></a></li>
+                                    <li><a href="{{route('immigration','england')}}"><p>英國</p><img src="{{asset('assets/imgs/england-sm.jpg')}}" alt=""/></a></li>
+                                    <li><a href="{{route('immigration','usa')}}"><p>美國</p><img src="{{asset('assets/imgs/usa-sm.jpg')}}" alt=""/></a></li>
+                                    <li><a href="{{route('immigration','ireland')}}"><p>愛爾蘭</p><img src="{{asset('assets/imgs/ireland-sm.jpg')}}" alt=""/></a></li>
+                                    <li><a href="{{route('immigration','australia')}}"><p>澳洲</p><img src="{{asset('assets/imgs/australia-sm.jpg')}}" alt=""/></a></li>
+                                    <li><a href="{{route('immigration','kitts')}}"><p>聖基茨</p><img src="{{asset('assets/imgs/kitts-sm.jpg')}}" alt=""/></a></li>
+                                    <li><a href="{{route('immigration','korea')}}"><p>韓國</p><img src="{{asset('assets/imgs/korea-sm.jpg')}}" alt=""/></a></li>
+                                    <li><a href="{{route('immigration','hungray')}}"><p>匈牙利</p><img src="{{asset('assets/imgs/huguary-sm.jpg')}}" alt=""/></a></li>
+                                    <li><a href="{{route('immigration','taiwan')}}"><p>台灣</p><img src="{{asset('assets/imgs/taiwan-sm.jpg')}}" alt=""/></a></li>
+                                    <li><a href="{{route('immigration','protugal')}}"><p>葡萄牙</p><img src="{{asset('assets/imgs/portugal-sm.jpg')}}" alt=""/></a></li>
+                                    <li><a href="{{route('immigration','malaysia')}}"><p>馬來西亞</p><img src="{{asset('assets/imgs/malaysia-sm.jpg')}}" alt=""/></a></li>
+                                    <li><a href="{{route('immigration','spain')}}"><p>西班牙</p><img src="{{asset('assets/imgs/spain-sm.jpg')}}" alt=""/></a></li>
+                                    <li><a href="{{route('immigration','singapore')}}"><p>新加坡</p><img src="{{asset('assets/imgs/singapore-sm.jpg')}}" alt=""/></a></li>
+                                    <li><a href="{{route('immigration','italy')}}"><p>意大利</p><img src="{{asset('assets/imgs/italy-sm.jpg')}}" alt=""/></a></li>
+                                    <li><a href="{{route('immigration','cananda')}}"><p>加拿大 </p><img src="{{asset('assets/imgs/canada-sm.jpg')}}" alt=""/></a></li>
+                                    <li><a href="{{route('immigration','holland')}}"><p>荷蘭</p><img src="{{asset('assets/imgs/holland-sm.jpg')}}" alt=""/></a></li>
+                                    <li><a href="{{route('immigration','saipan')}}"><p>塞班島</p><img src="{{asset('assets/imgs/saipan-sm.jpg')}}" alt=""/></a></li>
+                                    <li><a href="{{route('immigration','cyprus')}}"><p>浦路斯</p><img src="{{asset('assets/imgs/cyprus-sm.jpg')}}" alt=""/></a></li>
                                 </ul>
                         </div>
                     </div>
