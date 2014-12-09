@@ -12,7 +12,7 @@
         <section class="content" style="background-image: url('{{asset('assets/imgs/education_background.jpg')}}')">
             <div class="content-wrapper">
                 <div class="title">
-                    <p>升學顧問</p>
+                    <p>{{Lang::get('frontEndPages.title_education')}}</p>
                     <span class="arrow"></span>
                 </div>
                 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" id="content-carousel">

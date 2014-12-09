@@ -12,7 +12,7 @@
         <section class="content" style="background-image: url('{{asset('assets/imgs/partners_background.jpg')}}')">
             <div class="content-wrapper">
                 <div class="title">
-                    <p>海外房產投資</p>
+                    <p>{{Lang::get('frontEndPages.title_partners')}}</p>
                     <span class="arrow"></span>
                 </div>
 

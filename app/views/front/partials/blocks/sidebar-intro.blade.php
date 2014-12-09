@@ -1,5 +1,5 @@
 <div class="title">
-    <p>簡介德盛</p>
+    <p>{{Lang::get('frontEndPages.title_about')}}</p>
     <span class="arrow"></span>
 </div>
 <div class="description">

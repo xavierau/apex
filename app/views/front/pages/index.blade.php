@@ -12,7 +12,7 @@
                 <div class="content-wrapper">
                     <div class="row">
                         <div class="title">
-                            <p>投資移民</p>
+                            <p>{{Lang::get('frontEndPages.title_invesment_immigration')}}</p>
                             <span class="arrow"></span>
                         </div>
                         <div class="col-xs-10">

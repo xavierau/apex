@@ -12,7 +12,7 @@
         <section class="content" style="background-image: url('{{asset('assets/imgs/news_background.jpg')}}')">
             <div class="content-wrapper">
                 <div class="title">
-                    <p>最新消息</p>
+                    <p>{{Lang::get('frontEndPages.title_news')}}</p>
                     <span class="arrow"></span>
                 </div>
                  <div class="row content-item">

@@ -15,11 +15,6 @@ class BackendServiceProvider extends ServiceProvider
 		);
 
 		$this->app->bind(
-			'Acme\Repositories\Interfaces\ProductsInterface', 
-			'Acme\Repositories\EloquentProducts'
-		);
-
-		$this->app->bind(
 			'Acme\Repositories\Interfaces\MediasInterface', 
 			'Acme\Repositories\EloquentMedias'
 		);

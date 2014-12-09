@@ -1,5 +1,5 @@
 <div class="title">
-    <p>聯絡我們</p>
+    <p>{{Lang::get('frontEndPages.title_contact_us')}}</p>
     <span class="arrow"></span>
 </div>
 <div class="sidebar-contactForm">
@@ -28,44 +28,44 @@
         </div>
     </div>
     <br/>
-    <p>網上咨詢</p>
+    <p>{{Lang::get('frontEndPages.sidebar_form_title')}}</p>
     {{Form::open(["class"=>"form-horizontal", "id"=>"contact-form"])}}
         {{-- Name Form Input--}}
         <div class="form-group">
-            {{Form::label("name","你的姓名:", ["class"=>"col-sm-4 control-label"])}}
+            {{Form::label("name",Lang::get('frontEndPages.sidebar_form_label_name').":", ["class"=>"col-sm-4 control-label"])}}
              <div class="col-sm-8">
                 {{Form::text("name",null,["class"=>"form-control"])}}
              </div>
         </div>
         {{-- Name Form Input--}}
         <div class="form-group">
-            {{Form::label("name","你的電話:", ["class"=>"col-sm-4 control-label"])}}
+            {{Form::label("name",Lang::get('frontEndPages.sidebar_form_label_tel').":", ["class"=>"col-sm-4 control-label"])}}
              <div class="col-sm-8">
                 {{Form::text("name",null,["class"=>"form-control"])}}
              </div>
         </div>
         {{-- Email Form Input--}}
         <div class="form-group">
-            {{Form::label("email","你的電郵:", ["class"=>"col-sm-4 control-label"])}}
+            {{Form::label("email",Lang::get('frontEndPages.sidebar_form_label_email').":", ["class"=>"col-sm-4 control-label"])}}
              <div class="col-sm-8">
                 {{Form::input("email", "email",null,["class"=>"form-control"])}}
              </div>
         </div>
         {{-- Message Form Input--}}
         <div class="form-group">
-            {{Form::label("message","訊息內容:", ["class"=>"col-sm-4 control-label"])}}
+            {{Form::label("message",Lang::get('frontEndPages.sidebar_form_label_message').":", ["class"=>"col-sm-4 control-label"])}}
              <div class="col-sm-8">
                 {{Form::textarea("message",null,["class"=>"form-control", "rows"=>"4"])}}
              </div>
         </div>
         <div class="form-group">
              <label class="col-sm-12 control-label">
-                <input type="checkbox" name="contactme">我希望收到 德盛(大中華)有限公司寄給我的最新資訊。
+                <input type="checkbox" name="contactme">{{Lang::get('frontEndPages.sidebar_form_subscribe')}}
              </label>
         </div>
 
-        {{Form::submit("發送", ["class"=>"pull-right theme-button"])}}
-        {{Form::input("reset", "reset","重新填寫", ["class"=>"pull-right theme-button"])}}
+        {{Form::submit(Lang::get('frontEndPages.sidebar_form_submit'), ["class"=>"pull-right theme-button"])}}
+        {{Form::input("reset", "reset",Lang::get('frontEndPages.sidebar_form_reset'), ["class"=>"pull-right theme-button"])}}
     {{Form::close()}}
     <div class="clearfix"></div>
 

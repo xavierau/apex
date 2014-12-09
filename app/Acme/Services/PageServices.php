@@ -47,6 +47,11 @@ class PageServices
 		return $this->Page->getAllPages();			
 	}
 
+	public function getAllPagesWhereLangIdIs($data)
+	{
+		return $this->Page->getAllPagesWhereLangIdIs($data);
+	}
+
 	public function getPage($id)
 	{
 		

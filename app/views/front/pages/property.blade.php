@@ -12,7 +12,7 @@
         <section class="content" style="background-image: url('{{asset('assets/imgs/property_background.jpg')}}')">
             <div class="content-wrapper">
                 <div class="title">
-                    <p>海外房產投資</p>
+                    <p>{{Lang::get('frontEndPages.title_overseas_property_investment')}}</p>
                     <span class="arrow"></span>
                 </div>
                 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" id="content-carousel">

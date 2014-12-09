@@ -12,7 +12,7 @@
         <section class="content" style="background-image: url('{{asset('assets/imgs/about_work_background.jpg')}}')">
             <div class="content-wrapper">
                 <div class="title">
-                    <p>簡介德盛</p>
+                    <p>{{Lang::get('frontEndPages.title_about')}}</p>
                     <span class="arrow"></span>
                 </div>
                 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" id="content-carousel">

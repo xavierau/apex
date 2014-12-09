@@ -43,6 +43,10 @@ class EloquentPages implements PagesInterface
 		return Page::findOrFail($identificaton_resources);
 	}
 
+	public function getAllPagesWhereLangIdIs($data)
+	{
+		return Page::where('lang_id','=',$data)->get();
+	}
 	public function countWhere($col, $logic, $criteria)
 	{
 		return Page::where($col, $logic, $criteria)->count();

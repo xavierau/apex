@@ -8,13 +8,8 @@ use Cache;
 /**
 *
 */
-class ImmigrationComposer
+class ImmigrationComposer extends BaseFrontEndComposer
 {
-
-	public function __construct()
-	{
-		
-	}
 
 	public function compose($view)
 	{

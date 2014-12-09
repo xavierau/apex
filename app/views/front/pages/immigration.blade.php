@@ -12,7 +12,7 @@
         <section class="content" style="background-image: url('{{asset('assets/imgs/immigration_background.jpg')}}')">
             <div class="content-wrapper">
                 <div class="title">
-                    <p>投資移民</p>
+                    <p>{{Lang::get('frontEndPages.title_invesment_immigration')}}</p>
                     <span class="arrow"></span>
                 </div>
 

@@ -1,5 +1,5 @@
 <div class="title">
-    <p>我們的投資移民顧問團隊</p>
+    <p>{{Lang::get('frontEndPages.title_team')}}</p>
     <span class="arrow"></span>
 </div>
 <img src="{{asset('assets/imgs/team.png')}}" alt=""/>

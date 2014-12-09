@@ -12,7 +12,7 @@
         <section class="content">
             <div class="content-wrapper">
                 <div class="title">
-                    <p>聯絡我們</p>
+                    <p>{{Lang::get('frontEndPages.title_contact_us')}}</p>
                     <span class="arrow"></span>
                 </div>
                 <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3691.3424055075698!2d114.17304200000001!3d22.302886599999997!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x340400ebf8713b13%3A0x9cb900c9aef328a!2sHillwood+Centre%2C+17-19+Hillwood+Rd%2C+Tsim+Sha+Tsui%2C+Hong+Kong!5e0!3m2!1sen!2s!4v1416912566887" width="100%" height="450" frameborder="0" style="border:0"></iframe>

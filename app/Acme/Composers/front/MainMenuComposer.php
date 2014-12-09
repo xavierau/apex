@@ -4,10 +4,12 @@
 
 use Acme\Services\PageServices;
 use Cache;
+use Session;
+use Config;
 /**
 *
 */
-class MainMenuComposer
+class MainMenuComposer extends BaseFrontEndComposer
 {
 	protected $Page;
   public $html = "";
@@ -20,18 +22,24 @@ class MainMenuComposer
 	public function compose($view)
 	{
 
-		$menu = Cache::rememberForever('front_main_menu', function(){
-			return $this->createMenu();
-		});
+		// $menu = Cache::rememberForever('front_main_menu', function(){
+		// 	return $this->createMenu();
+		// });
 
-    // $menu = $this->createMenu();
+    $menu = $this->createMenu();
 		$view->with('menu', $menu);
 	}
 
 	private function createMenu()
     {
-        $links = $this->Page->getAllPages();
+        $links = $this->Page->getAllPagesWhereLangIdIs(Session::get(Config::get('setting.appName').'.'.'langId'));
+        if (count($links)==0) {
+          $languages = Config::get('setting.languages');
+          $links = $this->Page->getAllPagesWhereLangIdIs($languages[Config::get('app.fallback_locale')]);
+        }
 
+        // dd(Session::get(Config::get('setting.appName').'.'.'langId'));
+        // dd($links);
         foreach ($links as $element) {
             if ($element->parent_id == 0) {
                 $link[0][] = $element->id;
