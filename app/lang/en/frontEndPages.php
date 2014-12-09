@@ -22,6 +22,7 @@ return array(
 	'title_partners' => "Partners",
 	'hotline' => "Hotline",
 	'title_invesment_immigration' => "Investment Immigration",
+	'title_rental_management' => "Rental Management",
 	'title_call_hotline' => "Call us for details",
 	'sidebar_form_title' => "Online Enquiry",
 	'sidebar_form_label_name' => "Name",
@@ -30,7 +31,5 @@ return array(
 	'sidebar_form_label_message' => "Message",
 	'sidebar_form_submit' => "Submit",
 	'sidebar_form_reset' => "Reset",
-	'sidebar_form_subscribe' => "I like to recieve the newsletter from Apex Consultancy.",
-
-
+	'sidebar_form_subscribe' => "I like to recieve the newsletter from Apex Consultancy."
 );

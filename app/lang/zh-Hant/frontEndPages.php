@@ -21,6 +21,7 @@ return array(
 	'title_invesment_immigration' => "投資移民",
 	'title_education' => "升學顧問",
 	'title_overseas_property_investment' => "海外房產投資",
+	'title_rental_management' => "物業租務管理",
 	'title_partners' => "合作伙伴",
 	'title_call_hotline' => "詳情致電德盛顧問熱線查詢",
 	'sidebar_form_title' => "網上咨詢",
@@ -30,6 +31,5 @@ return array(
 	'sidebar_form_label_message' => "訊息內容",
 	'sidebar_form_submit' => "發送",
 	'sidebar_form_reset' => "重新填寫",
-	'sidebar_form_subscribe' => "我希望收到 德盛(大中華)有限公司寄給我的最新資訊。",
-
+	'sidebar_form_subscribe' => "我希望收到 德盛(大中華)有限公司寄給我的最新資訊。"
 );

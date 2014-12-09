@@ -91,7 +91,7 @@
                     </div>
                     <div class="row education">
                      <div class="title">
-                        <p>升學顧問</p>
+                        <p>{{Lang::get('frontEndPages.title_education')}}</p>
                         <span class="arrow"></span>
                      </div>
                      <div class="row">
@@ -124,7 +124,7 @@
                     <div class="row property">
                         <div class="col-xs-6 rental">
                             <div class="title">
-                                <p>物業租務管理</p>
+                                <p>{{Lang::get('frontEndPages.title_rental_management')}}</p>
                                 <span class="arrow"></span>
                              </div>
                              <ul class="country-list">
@@ -135,7 +135,7 @@
                         </div>
                         <div class="col-xs-6 investment">
                             <div class="title">
-                                <p>海外房產投資</p>
+                                <p>{{Lang::get('frontEndPages.title_overseas_property_investment')}}</p>
                                 <span class="arrow"></span>
                              </div>
                              <ul>
