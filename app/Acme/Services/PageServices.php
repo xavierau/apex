@@ -50,9 +50,7 @@ class PageServices
 			$this->message = "A new Page added!";
 
 
-            if (Cache::has("front_main_menu")){
-                Cache::forget("front_main_menu");
-            }
+            Cache::flush();
 
 			return true;
 		}
@@ -99,9 +97,7 @@ class PageServices
         // Delete the page content
 		$this->pageContent->deleteContent($page);
 		$this->message = $this->Page->deletePage($id)." has been deleted!";
-        if (Cache::has("front_main_menu")){
-            Cache::forget("front_main_menu");
-        }
+        Cache::flush();
 	}
 
 	public function updatePage($id, $inputs)
@@ -118,15 +114,13 @@ class PageServices
                 $this->Page->updatePage($id, $inputs);
                 $this->pageContent->updateContent($id, $inputs);
                 $this->message = $page->url ." has been update!";
+                Cache::flush();
 				return true;
 			}
 			$this->deletePage($id);
 			$this->addPage($inputs);
 			$this->message = $page->title." has been update!";
-            if (Cache::has("front_main_menu")){
-                Cache::forget("front_main_menu");
-                Cache::put();
-            }
+            Cache::flush();
 			return true;
 		}
 		return false;
