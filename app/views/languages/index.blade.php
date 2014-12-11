@@ -1,0 +1,1 @@
+/Applications/MAMP/htdocs/apex/app/views/languages/index.blade.php

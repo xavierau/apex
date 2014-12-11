@@ -1,8 +1,14 @@
 <?php
 
 class BaseController extends Controller {
+    function __construct()
+    {
+        View::share('default_lang', Config::get('app.locale'));
+        View::share('languages', DB::table('languages')->get());
+    }
 
-	/**
+
+    /**
 	 * Setup the layout used by the controller.
 	 *
 	 * @return void
@@ -14,6 +20,8 @@ class BaseController extends Controller {
 			$this->layout = View::make($this->layout);
 		}
 	}
+
+
 
     /**
      * @return mixed

@@ -12,16 +12,26 @@
                 <div class="panel-body">
                     <table class="table">
                         <thead>
-                            <th>Title</th>
+                            @foreach($languages as $lang)
+                            <th>Title( {{$lang->language}} )</th>
+                            @endforeach
                             <th>URL</th>
                             <th>Parent</th>
                             <th>Order</th>
                             <th>Action</th>
                         </thead>
                         <tbody>
-                            @foreach ($pages as $element)
+                            @foreach ($pages['page'] as $element)
                                 <tr>
-                                    <td data-title='{{$element->title}}'>{{$element->title}}</td>
+                                    @foreach($languages as $lang)
+                                        <td>
+                                            @foreach($pages['title'][$element->id] as $title)
+                                                @if($lang->id == $title->lang_id)
+                                                {{$title->title}}
+                                                @endif
+                                            @endforeach
+                                        </td>
+                                    @endforeach
                                     <td>{{$element->url}}</td>
                                     <td>
                                     @if ($element->parent_id == 0)

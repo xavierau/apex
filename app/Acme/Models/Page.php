@@ -8,8 +8,15 @@
 
 namespace Acme\Models;
 
+use PageContent;
+
 class Page extends \Eloquent {
     protected $fillable = [
-        'title', 'url', 'order', 'parent_id'
+        'url', 'order', 'parent_id'
     ];
+
+    public function title()
+    {
+        return $this->hasMany('PageContent');
+    }
 }

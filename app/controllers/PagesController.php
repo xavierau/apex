@@ -29,6 +29,8 @@ class PagesController extends \BaseController {
 
         View::share("viewPrefix", $this->viewPrefix);
         View::share("routePrefix", $this->routePrefix);
+
+        parent::__construct();
     }
 
     /**
@@ -100,11 +102,12 @@ class PagesController extends \BaseController {
 		if (Request::ajax()) {
 			return $this->page->countWhere("parent_id", "=", Input::get('parent_id'));
 		}
-		
-		$page = $this->page->getpage($id);
+		$data = $this->page->getpage($id);
+		$page = $data['page'];
+        $title = $data['title'];
 		$data = $this->page->getDataForForm($page->parent_id);
 		$data['count'] -= 1; 
-		return View::make($this->viewPrefix.'.edit',compact('page', 'data'));
+		return View::make($this->viewPrefix.'.edit',compact('page', 'data', 'title'));
 	}
 
 	/**

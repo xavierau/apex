@@ -22,33 +22,33 @@ class MainMenuComposer extends BaseFrontEndComposer
 	public function compose($view)
 	{
 
-		// $menu = Cache::rememberForever('front_main_menu', function(){
-		// 	return $this->createMenu();
-		// });
+		 $menu = Cache::rememberForever('front_main_menu_langId_'.Session::get('langId'), function(){
+		 	return $this->createMenu();
+		 });
 
-    $menu = $this->createMenu();
+//    $menu = $this->createMenu();
 		$view->with('menu', $menu);
 	}
 
 	private function createMenu()
     {
-        $links = $this->Page->getAllPagesWhereLangIdIs(Session::get(Config::get('setting.appName').'.'.'langId'));
-        if (count($links)==0) {
-          $languages = Config::get('setting.languages');
-          $links = $this->Page->getAllPagesWhereLangIdIs($languages[Config::get('app.fallback_locale')]);
-        }
+        $links = $this->Page->getAllPages();
 
-        // dd(Session::get(Config::get('setting.appName').'.'.'langId'));
-        // dd($links);
-        foreach ($links as $element) {
+        foreach ($links['page'] as $element) {
             if ($element->parent_id == 0) {
                 $link[0][] = $element->id;
             } else {
                 $link[$element->parent_id][] = $element->id;
             }
-
-            $data[$element->id]["title"] = $element->title;
             $data[$element->id]["url"] = $element->url;
+            foreach($links['title'][$element->id] as $title)
+            {
+                    if($title->lang_id == Session::get('langId')) {
+                        $data[$element->id]["title"] = $title->title;
+                    }
+            }
+
+
         }
 
         return $result = $this->menuAssemble($link, $data);

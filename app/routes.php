@@ -10,16 +10,23 @@
     | and give it the Closure to execute when that URI is requested.
     |
     */
+    if(!Cache::has('languages'))
+    {
+        Cache::rememberForever('languages',function(){
+            $result = DB::table('languages')->get();
+            foreach ($result as $element){
+                $data[$element->iso_code] = $element->id;
+            }
+            return $data;
+        });
+    }
+    if (!Session::has('langId') || !Session::has('lang')) {
+        $languages = Cache::get('languages');
+        Session::put('langId',$languages[Config::get('app.locale')]);
+        Session::put('lang',Config::get('app.locale'));
 
-    $key = Config::get('setting.appName').'.'.'langId';
-    $langKey = Config::get('setting.appName').'.'.'lang';
-
-    if (!Session::has($key) || !Session::has($langKey)) {
-        $languages = Config::get('setting.languages');
-        Session::put($key,$languages[Config::get('app.locale')]);
-        Session::put($langKey,Config::get('app.locale'));
     }else{
-        App::setLocale(Session::get($langKey));
+        App::setLocale(Session::get('lang'));
     }
 
     foreach (File::allFiles(__DIR__.'/routes') as $partial) {

@@ -13,5 +13,11 @@ interface PagesInterface
 	public function updatePage($identificaton_resources, $data);
 	public function getAllPages();
 	public function getPage($identificaton_resources);
-	
+
+    public function getAllPagesWhereLangIdIs($data);
+
+    public function getTable();
+
+    public function countWhere($col, $logic, $criteria);
+
 } // END interface UsersInterface
