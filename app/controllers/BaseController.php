@@ -1,10 +1,15 @@
 <?php
 
-class BaseController extends Controller {
+    use Laracasts\Commander\CommanderTrait;
+
+    class BaseController extends Controller {
+
+    use CommanderTrait;
+
     function __construct()
     {
         View::share('default_lang', Config::get('app.locale'));
-        View::share('languages', DB::table('languages')->get());
+        View::share('languages',  DB::table('languages')->get());
     }
 
 

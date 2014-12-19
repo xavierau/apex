@@ -24,7 +24,7 @@
                      {{-- Email Form Input--}}
                      <div class="form-group">
                          {{Form::label("email","Email:")}}
-                         {{Form::email("email",null,["class"=>"form-control"])}}
+                         {{Form::email("email",null,["class"=>"form-control", "autofocus"])}}
                      </div>
                      {{-- Password Form Input--}}
                      <div class="form-group">

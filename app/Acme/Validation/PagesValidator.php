@@ -17,8 +17,6 @@ class PagesValidator extends Validator
 		$this->rules =  [
 			"title" => "required",
 			"url" => "required",
-			"order" => "numeric|required",
-			"parent_id" => "numeric|required",
 		];
 		
 	}

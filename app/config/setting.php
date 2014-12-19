@@ -24,7 +24,7 @@ return array(
 
 	'languages' => [
 					"en"=>1,
-					"chi"=>2,
+					"zh-Hant"=>2,
 					"zh-Hans"=>3
 					],
 

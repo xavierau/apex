@@ -5,7 +5,6 @@
 use Acme\Services\PageServices;
 use Cache;
 use Session;
-use Config;
 /**
 *
 */
@@ -26,31 +25,46 @@ class MainMenuComposer extends BaseFrontEndComposer
 		 	return $this->createMenu();
 		 });
 
-//    $menu = $this->createMenu();
 		$view->with('menu', $menu);
 	}
 
 	private function createMenu()
     {
-        $links = $this->Page->getAllPages();
-
-        foreach ($links['page'] as $element) {
-            if ($element->parent_id == 0) {
-                $link[0][] = $element->id;
-            } else {
-                $link[$element->parent_id][] = $element->id;
-            }
-            $data[$element->id]["url"] = $element->url;
-            foreach($links['title'][$element->id] as $title)
+        $links = $this->Page->getAllActiveSinglePages();
+        $link = [];
+        $data = [];
+//        dd($links[0]->content[0]->title);
+        foreach ($links as $element)
+        {
+            foreach($element->metadata as $metadata)
             {
-                    if($title->lang_id == Session::get('langId')) {
-                        $data[$element->id]["title"] = $title->title;
+                if($metadata->meta_key == 'parent_id')
+                {
+                    if($metadata->meta_value == 0){
+                        $link[0][] = $element->id;
+                    }else{
+                        $link[$metadata->meta_value][] = $element->id;
                     }
+                }
             }
 
+            foreach($element->content as $title)
+            {
 
+                if($title->lang_id == Session::get('langId')) {
+                    $data[$element->id]["title"] = $title->title;
+
+                }
+            }
+
+//            if ($element->parent_id == 0) {
+//                $link[0][] = $element->id;
+//            } else {
+//                $link[$element->parent_id][] = $element->id;
+//            }
+
+            $data[$element->id]["url"] = $element->url;
         }
-
         return $result = $this->menuAssemble($link, $data);
 	}
 

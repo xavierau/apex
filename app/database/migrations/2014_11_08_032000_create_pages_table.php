@@ -16,8 +16,6 @@ class CreatePagesTable extends Migration {
 		{
 			$table->increments('id');
 			$table->text('url');
-			$table->integer('parent_id');
-			$table->integer('order');
 			$table->timestamps();
 		});
 	}

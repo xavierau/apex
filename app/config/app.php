@@ -52,7 +52,7 @@ return array(
 	|
 	*/
 
-	'locale' => 'chi',
+	'locale' => 'zh-Hant',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -124,8 +124,9 @@ return array(
 		'Way\Generators\GeneratorsServiceProvider',
         'Laracasts\Commander\CommanderServiceProvider',
         'Cartalyst\Sentry\SentryServiceProvider',
-
+        'Laracasts\Commander\CommanderServiceProvider',
 		'Acme\BackendServiceProvider',
+        'Acme\SettingDefaultCacheServiceProvider',
 	),
 
 	/*

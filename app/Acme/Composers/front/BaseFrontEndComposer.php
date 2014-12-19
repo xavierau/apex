@@ -1,5 +1,6 @@
 <?php namespace Acme\Composers\front;
 
+use Cache;
 use Config;
 use Session;
 
@@ -8,13 +9,13 @@ use Session;
 */
 class BaseFrontEndComposer
 {
-	
-	function __construct()
+    protected $key;
+
+    function __construct()
 	{
-		$key = Config::get('setting.appName').'.'.'langId';
-		if (!Session::has($key)) {
-			$lang = Config::get('setting.languages');
-			Session::put($key,$lang[Config::get('app.locale')]);
+        $this->key = 'langId';
+		if (!Session::has($this->key)) {
+			Session::put($this->key,Cache::get('setting_default_language'));
 		}
-	}
+    }
 }

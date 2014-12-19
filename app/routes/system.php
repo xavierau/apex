@@ -9,6 +9,8 @@
             Route::resource('pages', 'PagesController');
             Route::resource('news', 'NewsController');
             Route::resource('pageContents', 'PageContentsController');
+            Route::resource('menus', 'MenusController');
+            Route::resource('languages', 'LanguagesController');
 
             Route::get('pages', [
                 "as"   => "admin.dashboard",

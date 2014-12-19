@@ -1,7 +1,7 @@
 <?php
 class PageContent extends \Eloquent {
 	protected $fillable = ['title', 'lang_id', 'page_id'];
-    protected $table = "pageContents";
+    protected $table = "page_content";
 
     public function page()
     {

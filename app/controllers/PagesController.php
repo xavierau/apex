@@ -1,20 +1,11 @@
 <?php
 
 
-use Acme\Services\PageServices;
+    use Acme\Page\DeleteThePageCommand;
+    use Acme\Services\PageServices;
 
 class PagesController extends \BaseController {
 
-
-
-//	protected $page;
-//	protected $viewPrefix, $routePrefix;
-//
-//	function __construct(pageServices $page)
-//	{
-//		$this->page = $page;
-
-//	}
     /**
      * @var PageServices
      */
@@ -42,7 +33,9 @@ class PagesController extends \BaseController {
 	public function index()
 	{
 		//
-		$pages = $this->page->getAllPages();
+		$pages = $this->page->showAllPages();
+
+
 		return View::make($this->viewPrefix.'.index',compact('pages'));
 	}
 	/**
@@ -57,7 +50,10 @@ class PagesController extends \BaseController {
 		if (Request::ajax()) {
 			return $this->page->countWhere("parent_id", "=", Input::get('parent_id'));
 		}
-		$data = $this->page->getDataForForm();
+
+//        $this->page->addPage()
+//		$data = $this->page->getDataForForm();
+        dd('here');
 		return View::make($this->viewPrefix.'.create',compact('data'));
 	}
 
@@ -102,12 +98,8 @@ class PagesController extends \BaseController {
 		if (Request::ajax()) {
 			return $this->page->countWhere("parent_id", "=", Input::get('parent_id'));
 		}
-		$data = $this->page->getpage($id);
-		$page = $data['page'];
-        $title = $data['title'];
-		$data = $this->page->getDataForForm($page->parent_id);
-		$data['count'] -= 1; 
-		return View::make($this->viewPrefix.'.edit',compact('page', 'data', 'title'));
+        $page = $this->page->showEditPage($id);
+		return View::make($this->viewPrefix.'.edit',compact('page'));
 	}
 
 	/**
@@ -136,11 +128,12 @@ class PagesController extends \BaseController {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function destroy($id)
-	{
-		//
-		$this->page->deletepage($id);
+	public function destroy($pageId)
+    {
+        $this->execute(DeleteThePageCommand::class, ['pageId'=>$pageId]);
+
         return $this->redirectToIndexWithMessage($this->page->message);
+
 	}
 
 

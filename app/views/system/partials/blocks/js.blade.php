@@ -10,6 +10,12 @@
 <!-- Custom Theme JavaScript -->
 {{HTML::script('components/sb-admin-2/js/sb-admin-2.js')}}
 
+<!-- Redactor Editor -->
+<script src="{{asset('components/redactor/redactor/redactor.js')}}"></script>
+
+<!-- Redactor Editor PlugIn File Manager -->
+<script src="{{asset('components/redactor/plugins/filemanager.js')}}"></script>
+
 
 	
 <script>
@@ -32,10 +38,17 @@
 		deleteForm.submit();
 	})
 
-    $(function () {
         $('#side-menu').metisMenu({
           toggle: false
         });
-    });
+
+        $('textarea').redactor({
+               focus: true,
+               fileUpload: '{{route('redactorImageUpload')}}',
+               fileManagerJson: '{{asset('assets/upload/files.json')}}',
+               plugins: ['imagemanager']
+           });
+
+        $('#tabs').tab();
 </script>
 

@@ -14,8 +14,10 @@
 // function to retrieve GET params
 $.urlParam = function(name){
 	var results = new RegExp('[\\?&]' + name + '=([^&#]*)').exec(window.location.href);
-	if (results)
-		return results[1]; 
+	if (results){
+        return results[1];
+    }
+
 	else
 		return 0;
 };
@@ -28,12 +30,16 @@ $.urlParam = function(name){
 var loadConfigFile = function (type) {
 	var json = null;
 	type = (typeof type === "undefined") ? "user" : type;
-	
-	if(type == 'user') {
-		var url = './scripts/filemanager.config.js';
-	} else {
-		var url = './scripts/filemanager.config.js.default'
-	}
+	var host = window.location.hostname;
+    if(host == "localhost")
+    {
+        if(type == 'user') {
+            var url = window.location.origin+'/apex/public/filemanager/scripts/filemanager.config.js';
+        } else {
+            var url = window.location.origin+'/apex/public/filemanager/scripts/filemanager.config.js.default'
+        }
+    }
+
     
     $.ajax({
         'async': false,

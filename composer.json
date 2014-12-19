@@ -7,7 +7,8 @@
 		"laravel/framework": "4.2.*",
 		"laracasts/commander": "1.3",
         "mustache/mustache": "~2.6",
-        "cartalyst/sentry": "2.1.*"
+        "cartalyst/sentry": "2.1.*",
+        "laracasts/commander": "~1.0"
 	},
 	"require-dev": {
 		"fzaninotto/faker": "v1.3.0",
@@ -26,8 +27,8 @@
 			"app/database/seeds",
 			"app/tests/TestCase.php"
 		],
-		"psr-0": {
-			"Acme" : "app/"
+		"psr-4": {
+			"Acme\\" : "app/Acme"
 		}
 	},
 	"scripts": {

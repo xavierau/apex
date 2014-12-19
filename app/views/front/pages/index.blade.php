@@ -1,7 +1,6 @@
 @extends('front.layouts.default')
 
 @section('content')
-
     @include('front.partials.indexBanner')
     @include('front.partials.indexBox')
     <div class="row">

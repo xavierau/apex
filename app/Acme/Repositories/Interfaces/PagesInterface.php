@@ -8,6 +8,7 @@
  **/
 interface PagesInterface
 {
+
 	public function addPage($data);
 	public function deletePage($identificaton_resources);
 	public function updatePage($identificaton_resources, $data);
@@ -19,5 +20,7 @@ interface PagesInterface
     public function getTable();
 
     public function countWhere($col, $logic, $criteria);
+
+	public function getAllActiveSinglePages();
 
 } // END interface UsersInterface

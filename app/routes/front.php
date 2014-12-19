@@ -1,25 +1,11 @@
 <?php
 
-    Route::get('setLang/{lang?}', [ 'as' => "setLang", function ($lang=null) {
-        $languages = Cache::get('languages');
-//        dd($languages);
-        if ($lang && array_key_exists($lang, $languages)) {
-            Session::forget('langId');
-            Session::forget('lang');
-
-            Session::put('langId',$languages[$lang]);
-//            dd(Session::get('langId'));
-            Session::put('lang',$lang);
-        }
-        return Redirect::back();
-    }]);
-
-    Route::get('/',  function () {
-        return View::make("front.pages.index");
+    Route::get('/', function(){
+        return View::make("front.pages.index-temp");
     });
 
     Route::get('home', ["as" => "home", function () {
-        return View::make("front.pages.index");
+        return View::make("front.pages.index-temp");
     }]);
 
     Route::get('contact', ["as" => "contact", function () {

@@ -3,7 +3,7 @@
 @section('content')
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header">All Pages <a href="{{route('admin.pages.create')}}" class="btn btn-success pull-right"><i class="fa fa-plus"></i> Create New</a> </h1>
+            <h1 class="page-header">All Pages <a href="{{route('admin.menus.create')}}" class="btn btn-success pull-right"><i class="fa fa-plus"></i> Create New</a> </h1>
         </div>
     </div>
     <div class="row">
@@ -12,46 +12,31 @@
                 <div class="panel-body">
                     <table class="table">
                         <thead>
-                            @foreach($languages as $lang)
-                            <th>Title( {{$lang->language}} )</th>
+                            @foreach($languages as $language)
+                                <th>Title ( {{$language->language}} )</th>
                             @endforeach
                             <th>URL</th>
-                            <th>Parent</th>
-                            <th>Order</th>
+                            <th>Active</th>
                             <th>Action</th>
                         </thead>
                         <tbody>
-                            @foreach ($pages['page'] as $element)
-                                <tr>
-                                    @foreach($languages as $lang)
+                            @foreach($pages as $page)
+                            <tr>
+                                @foreach($languages as $language)
                                         <td>
-                                            @foreach($pages['title'][$element->id] as $title)
-                                                @if($lang->id == $title->lang_id)
-                                                {{$title->title}}
+                                            @foreach($page->content as $content)
+                                                @if($content->lang_id == $language->id)
+                                                    {{$content->title}}
                                                 @endif
                                             @endforeach
                                         </td>
-                                    @endforeach
-                                    <td>{{$element->url}}</td>
-                                    <td>
-                                    @if ($element->parent_id == 0)
-                                        Top Level
-                                    @else
-                                    @foreach ($pages as $page)
-                                        @if ($page->id == $element->parent_id)
-                                            {{$page->title}}
-                                        @endif
-                                    @endforeach
-                                    @endif
-                                    </td>
-                                    <td>{{$element->order}}</td>
-                                    <td>
-                                        <div class="btn-group">
-                                                <a href="{{route($routePrefix.'.edit', $element->id)}}" class="btn btn-info"><i class="fa fa-pencil-square-o"></i> Edit</a>
-                                                <button class="btn-danger btn deleteButton" data-id="{{$element->id}}" data-toggle="modal" data-target="#deleteModal"><i class="fa fa-times"></i> Delete</button>
-                                        </div>
-                                    </td>
-                                </tr>
+                                @endforeach
+                                <td>{{$page->url}}</td>
+                                <td>{{$page->active == 1 ? "Active":"Not Active"}}</td>
+                                <td>
+                                    <a href="{{route('admin.pages.edit',$page->id)}}" class="btn btn-info"> Edit</a>
+                                </td>
+                            </tr>
                             @endforeach
                         </tbody>
                     </table>

@@ -1,8 +1,25 @@
 <?php
 
-class LanguagesController extends \BaseController {
+    use Acme\Services\LanguageServices;
 
-	/**
+    class LanguagesController extends \BaseController {
+
+    protected $language;
+
+        function __construct(LanguageServices $language )
+        {
+            $this->language = $language;
+            $this->viewPrefix = "system.languages";
+            $this->routePrefix = "admin.languages";
+
+            View::share("viewPrefix", $this->viewPrefix);
+            View::share("routePrefix", $this->routePrefix);
+
+            parent::__construct();
+        }
+
+
+    /**
 	 * Display a listing of the resource.
 	 * GET /languages
 	 *
@@ -11,6 +28,9 @@ class LanguagesController extends \BaseController {
 	public function index()
 	{
 		//
+        $languages = $this->language->showIndexPage();
+
+        return View::make('system.languages.index');
 	}
 
 	/**

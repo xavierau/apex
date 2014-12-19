@@ -13,3 +13,7 @@
 <!-- MyStyle -->
 {{HTML::style('assets/css/mySystemStyle.css')}}
 
+<!-- Redactor Editor -->
+{{HTML::style('components/redactor/redactor/redactor.css')}}
+
+

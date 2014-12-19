@@ -220,7 +220,7 @@ tinymce.PluginManager.add('charmap', function(editor) {
 		['964', 'tau'],
 		['965', 'upsilon'],
 		['966', 'phi'],
-		['967', 'chi'],
+		['967', 'zh-Hant'],
 		['968', 'psi'],
 		['969', 'omega'],
 	// symbols
