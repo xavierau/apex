@@ -120,8 +120,8 @@ class PageContentsController extends \BaseController {
 
 		$pageContent = $page->content;
 
-		$allLanguagesId = Language::lists('id');
-		$languages = Language::all();
+		$allLanguagesId = Language::whereActive(1)->lists('id');
+		$languages = Language::whereActive(1)->all();
 
 		foreach($languages as $language)
 		{
