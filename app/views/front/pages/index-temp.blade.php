@@ -15,54 +15,30 @@
                         <span class="arrow"></span>
                     </div>
                     <div class="col-xs-10">
-                        <div class="row">
-                            <div class="col-xs-6">
-                                <div class="summary">
-                                    <img src="{{asset('assets/imgs/italy.jpg')}}" alt=""/>
-                                    <div class="summary">
-                                        <h5 class="heading">意大利</h5>
-                                        <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam consectetur corporis cum debitis deserunt dicta earum eum, excepturi expedita facere fuga hic id illum in ipsa itaque iusto laborum laudantium libero magni minus mollitia non nostrum numquam odio optio quasi quibusdam quidem quis reiciendis reprehenderit rerum sed sunt tempora vero?</p>
-                                        <a class="theme-button pull-right" href="{{route('immigration','italy')}}">更多消息</a>
-                                        <div class="clearfix"></div>
+
+                        <?php $i=0 ?>
+                            @foreach($immigrations as $immigration)
+                                @if($i%2 == 0)
+                                    <div class="row">
+                                        @endif
+                                        <div class="col-xs-6">
+                                            <div class="summary">
+                                                <img src="{{asset('assets/imgs/italy.jpg')}}" alt=""/>
+                                                <div class="summary">
+                                                    <h5 class="heading">{{$immigration->title}}</h5>
+                                                    <div class="index-content">
+                                                        {{$immigration->content}}
+                                                    </div>
+                                                    <a class="theme-button pull-right" href="{{route('immigration')}}/{{$immigration->identifier}}">更多消息</a>
+                                                    <div class="clearfix"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        @if($i%2 == 1)
                                     </div>
-                                </div>
-                            </div>
-                            <div class="col-xs-6">
-                                <div class="summary">
-                                    <img src="{{asset('assets/imgs/spain.jpg')}}" alt=""/>
-                                    <div class="summary">
-                                        <h5 class="heading">西班牙</h5>
-                                        <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam consectetur corporis cum debitis deserunt dicta earum eum, excepturi expedita facere fuga hic id illum in ipsa itaque iusto laborum laudantium libero magni minus mollitia non nostrum numquam odio optio quasi quibusdam quidem quis reiciendis reprehenderit rerum sed sunt tempora vero?</p>
-                                        <a class="theme-button pull-right" href="{{route('immigration','spain')}}">更多消息</a>
-                                        <div class="clearfix"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-xs-6">
-                                <div class="summary">
-                                    <img src="{{asset('assets/imgs/ireland.jpg')}}" alt=""/>
-                                    <div class="summary">
-                                        <h5 class="heading">愛爾蘭</h5>
-                                        <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam consectetur corporis cum debitis deserunt dicta earum eum, excepturi expedita facere fuga hic id illum in ipsa itaque iusto laborum laudantium libero magni minus mollitia non nostrum numquam odio optio quasi quibusdam quidem quis reiciendis reprehenderit rerum sed sunt tempora vero?</p>
-                                        <a class="theme-button pull-right" href="{{route('immigration','ireland')}}">更多消息</a>
-                                        <div class="clearfix"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xs-6">
-                                <div class="summary">
-                                    <img src="{{asset('assets/imgs/malaysia.jpg')}}" alt=""/>
-                                    <div class="summary">
-                                        <h5 class="heading">馬來西亞</h5>
-                                        <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam consectetur corporis cum debitis deserunt dicta earum eum, excepturi expedita facere fuga hic id illum in ipsa itaque iusto laborum laudantium libero magni minus mollitia non nostrum numquam odio optio quasi quibusdam quidem quis reiciendis reprehenderit rerum sed sunt tempora vero?</p>
-                                        <a class="theme-button pull-right" href="{{route('immigration','malaysia')}}">更多消息</a>
-                                        <div class="clearfix"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                                @endif
+                            <?php $i++ ?>
+                        @endforeach
                         <a href="{{route('immigration')}}" class="pull-right">更多消息</a>
                     </div>
                     <div class="col-xs-2">
