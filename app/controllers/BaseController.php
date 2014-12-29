@@ -9,7 +9,8 @@
     function __construct()
     {
         View::share('default_lang', Config::get('app.locale'));
-        View::share('languages',  DB::table('languages')->get());
+        View::share('languages',  DB::table('languages')->whereActive(1)->get());
+        View::share('allLanguages',  DB::table('languages')->get());
     }
 
 

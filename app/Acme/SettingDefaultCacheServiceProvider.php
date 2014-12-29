@@ -12,7 +12,6 @@ namespace Acme;
 use Acme\Models\Setting;
 use Cache;
 use Illuminate\Support\ServiceProvider;
-use Session;
 
 class SettingDefaultCacheServiceProvider extends ServiceProvider {
 
@@ -34,7 +33,12 @@ class SettingDefaultCacheServiceProvider extends ServiceProvider {
 
             foreach($settings as $setting)
             {
-                Cache::forever("setting_$setting->meta_key", $setting->meta_value);
+                if($setting->serialized == 1)
+                {
+                    Cache::forever("setting_$setting->meta_key", unserialize($setting->meta_value));
+                }elseif($setting->serialized == 0){
+                    Cache::forever("setting_$setting->meta_key", $setting->meta_value);
+                }
             }
             Cache::forever("setting_loaded", true);
         }

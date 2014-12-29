@@ -22,7 +22,7 @@
                                     <div class="summary">
                                         <h5 class="heading">意大利</h5>
                                         <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam consectetur corporis cum debitis deserunt dicta earum eum, excepturi expedita facere fuga hic id illum in ipsa itaque iusto laborum laudantium libero magni minus mollitia non nostrum numquam odio optio quasi quibusdam quidem quis reiciendis reprehenderit rerum sed sunt tempora vero?</p>
-                                        <a class="theme-button pull-right" href="">更多消息</a>
+                                        <a class="theme-button pull-right" href="{{route('immigration','italy')}}">更多消息</a>
                                         <div class="clearfix"></div>
                                     </div>
                                 </div>
@@ -33,7 +33,7 @@
                                     <div class="summary">
                                         <h5 class="heading">西班牙</h5>
                                         <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam consectetur corporis cum debitis deserunt dicta earum eum, excepturi expedita facere fuga hic id illum in ipsa itaque iusto laborum laudantium libero magni minus mollitia non nostrum numquam odio optio quasi quibusdam quidem quis reiciendis reprehenderit rerum sed sunt tempora vero?</p>
-                                        <a class="theme-button pull-right" href="">更多消息</a>
+                                        <a class="theme-button pull-right" href="{{route('immigration','spain')}}">更多消息</a>
                                         <div class="clearfix"></div>
                                     </div>
                                 </div>
@@ -46,7 +46,7 @@
                                     <div class="summary">
                                         <h5 class="heading">愛爾蘭</h5>
                                         <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam consectetur corporis cum debitis deserunt dicta earum eum, excepturi expedita facere fuga hic id illum in ipsa itaque iusto laborum laudantium libero magni minus mollitia non nostrum numquam odio optio quasi quibusdam quidem quis reiciendis reprehenderit rerum sed sunt tempora vero?</p>
-                                        <a class="theme-button pull-right" href="">更多消息</a>
+                                        <a class="theme-button pull-right" href="{{route('immigration','ireland')}}">更多消息</a>
                                         <div class="clearfix"></div>
                                     </div>
                                 </div>
@@ -57,13 +57,13 @@
                                     <div class="summary">
                                         <h5 class="heading">馬來西亞</h5>
                                         <p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam consectetur corporis cum debitis deserunt dicta earum eum, excepturi expedita facere fuga hic id illum in ipsa itaque iusto laborum laudantium libero magni minus mollitia non nostrum numquam odio optio quasi quibusdam quidem quis reiciendis reprehenderit rerum sed sunt tempora vero?</p>
-                                        <a class="theme-button pull-right" href="">更多消息</a>
+                                        <a class="theme-button pull-right" href="{{route('immigration','malaysia')}}">更多消息</a>
                                         <div class="clearfix"></div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <a href="" class="pull-right">更多消息</a>
+                        <a href="{{route('immigration')}}" class="pull-right">更多消息</a>
                     </div>
                     <div class="col-xs-2">
                         <ul class="country-list">

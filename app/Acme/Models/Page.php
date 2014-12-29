@@ -29,6 +29,11 @@ class Page extends \Eloquent {
         return $this->hasMany('PageContent');
     }
 
+    public function media()
+    {
+        return $this->hasMany('Acme\Models\Media');
+    }
+
     public function addNewPage()
     {
 

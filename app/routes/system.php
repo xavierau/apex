@@ -11,6 +11,9 @@
             Route::resource('pageContents', 'PageContentsController');
             Route::resource('menus', 'MenusController');
             Route::resource('languages', 'LanguagesController');
+            Route::resource('translations', 'TranslationsController');
+            Route::resource('pageContent', 'PageContentsController');
+            Route::resource('messages', 'MessagesController');
 
             Route::get('pages', [
                 "as"   => "admin.dashboard",
@@ -38,6 +41,23 @@
         ]);
 
 
+
+
+         // Ajax request
+        Route::post('languageActivation',[
+            'as'=>'language activation',
+            'uses' => 'AjaxController@postLanguageActivation'
+        ]);
+
+        Route::post('languageDeactivation',[
+            'as'=>'language deactivation',
+            'uses' => 'AjaxController@postLanguageDeactivation'
+        ]);
+
+        Route::post('languageSetDefault',[
+            'as'=>'language setdefault',
+            'uses' => 'AjaxController@postLanguageSetDefault'
+        ]);
 
     });
 

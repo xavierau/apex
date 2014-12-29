@@ -11,24 +11,36 @@
                 </span>
                 </div>
             </li> -->
+            {{--<li>--}}
+                {{--<a href="index.html"><i class="fa fa-dashboard"></i> Dashboard</a>--}}
+            {{--</li>--}}
             <li>
-                <a class="active" href="index.html"><i class="fa fa-dashboard"></i> Dashboard</a>
+                <a href="{{route('admin.pages.index')}}"><i class="fa fa-file-o"></i> Pages</a>
             </li>
             <li>
-                <a class="active" href="{{route('admin.pages.index')}}"><i class="fa fa-file-o"></i> Pages</a>
+                <a href="{{route('admin.pageContent.index')}}"><i class="fa fa-file-text-o"></i> Contents <span class="fa arrow"></a>
+                <ul class="nav nav-second-level">
+                    <li>
+                        <a href="{{route('admin.pageContent.index',['page'=>'immigration'])}}">Immigration </a>
+                    </li>
+                    <li>
+                        <a href="{{route('admin.pageContent.index',['page'=>'news'])}}, 'news">News </a>
+                    </li>
+                </ul>
+                <!-- /.nav-second-level -->
             </li>
             <li>
-                <a class="active" href="{{route('admin.menus.index')}}"><i class="fa fa-sitemap"></i> Menus</a>
+                <a href="{{route('admin.messages.index')}}"><i class="fa fa-comment-o"></i> Messages</a>
             </li>
             <li>
-                <a href="#"><i class="fa fa-cog"></i> Settings<span class="fa arrow"></span></a>
+                <a href="#"><i class="fa fa-cog"></i> Settings <span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level">
                     <li>
                         <a href="{{route('admin.languages.index')}}">Languages</a>
                     </li>
-                    <li>
-                        <a href="login.html">Login Page</a>
-                    </li>
+                    {{--<li>--}}
+                        {{--<a href="{{route('admin.translations.index')}}">Translation</a>--}}
+                    {{--</li>--}}
                 </ul>
                 <!-- /.nav-second-level -->
             </li>

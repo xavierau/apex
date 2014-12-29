@@ -39,3 +39,8 @@
     Route::get('immigration/{country?}', ["as" => "immigration", function ($country=null) {
         return View::make("front.pages.immigration")->withCountry($country);
     }]);
+
+    Route::post('sendMessage', [
+        "as" => "send message",
+        "uses" => "MessagesController@sendMessage"
+    ])->before("csrf_Ajax");

@@ -31,5 +31,5 @@ return array(
 	'sidebar_form_label_message' => "Message",
 	'sidebar_form_submit' => "Submit",
 	'sidebar_form_reset' => "Reset",
-	'sidebar_form_subscribe' => "I like to recieve the newsletter from Apex Consultancy."
+	'sidebar_form_subscribe' => "I like to receive the newsletter from Apex Consultancy."
 );

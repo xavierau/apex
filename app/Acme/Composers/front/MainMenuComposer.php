@@ -50,10 +50,8 @@ class MainMenuComposer extends BaseFrontEndComposer
 
             foreach($element->content as $title)
             {
-
                 if($title->lang_id == Session::get('langId')) {
                     $data[$element->id]["title"] = $title->title;
-
                 }
             }
 
@@ -65,6 +63,9 @@ class MainMenuComposer extends BaseFrontEndComposer
 
             $data[$element->id]["url"] = $element->url;
         }
+
+//        dd($element->content[0]->title);
+
         return $result = $this->menuAssemble($link, $data);
 	}
 

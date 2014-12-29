@@ -31,5 +31,8 @@ return array(
 	'sidebar_form_label_message' => "訊息內容",
 	'sidebar_form_submit' => "發送",
 	'sidebar_form_reset' => "重新填寫",
-	'sidebar_form_subscribe' => "我希望收到 德盛(大中華)有限公司寄給我的最新資訊。"
+	'sidebar_form_subscribe' => "我希望收到 德盛(大中華)有限公司寄給我的最新資訊。",
+	'address' => "總行地址：尖沙咀山林道17-19號 山林中心'1003室",
+	'tel' => "電話：(852) 2682 8516",
+	'email' => "電郵：info@apexconsultancy.com.hk",
 );

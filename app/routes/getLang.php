@@ -1,25 +1,28 @@
 <?php
 
-    if(!Cache::has('languages'))
-    {
-        Cache::rememberForever('languages',function(){
-            $result = DB::table('languages')->get();
+    if(!Cache::has('languages') || !Session::has('langId') || !Session::has('lang')){
+        $languages=Cache::rememberForever('languages',function(){
+            $data=[];
+            $result = DB::table('languages')->whereActive(1)->get();
             foreach ($result as $element){
-                $data[$element->iso_code] = $element->id;
+                $data[] = [
+                    'id'=>$element->id,
+                    'language'=>$element->language,
+                    'iso_code'=>$element->iso_code,
+                ];
             }
             return $data;
         });
-    }
-    if (!Session::has('langId') || !Session::has('lang')) {
-        $languages = Cache::get('languages');
         Session::put('langId',Cache::get('setting_default_language'));
-        foreach($languages as $language =>$lang_id)
+        foreach($languages as $language)
         {
-            if($lang_id == Cache::get('setting_default_language'))
+            if($language['id'] == Cache::get('setting_default_language'))
             {
-                Session::put('lang',$language);
+                Session::put('lang',$language['language']);
+                Session::put('langISO',$language['iso_code']);
             }
         }
-    }else{
-        App::setLocale(Session::get('lang'));
     }
+
+    App::setLocale(Session::get('langISO'));
+

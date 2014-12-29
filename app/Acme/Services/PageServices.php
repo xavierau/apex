@@ -14,7 +14,6 @@ use PageContent;
 */
 class PageServices
 {
-	
 	public $pageOperator;
     private $pageContentOperator;
 	public $validator;
@@ -105,11 +104,13 @@ class PageServices
 
 	public function updatePage($id, $inputs)
 	{
-		$page = $this->pageOperator->getPage($id);
+//        dd($inputs['active']);
+		$page = $this->pageOperator->getPageWithSingleContent($id);
 
 		if ($this->validator->isUpdateValid($inputs, $id))
         {
             $page->url = $inputs['url'];
+            $page->active = $inputs['active'];
             $page->save();
 
             $allLanguagesId = Language::lists('id');
@@ -142,22 +143,33 @@ class PageServices
 
     public function showAllPages()
     {
-        $pages = $this->pageOperator->getAllPages();
+        $result = $this->pageOperator->getAllPages();
+        $pages = $this->fetchMetadata($result);
+        $pages = $this->fetchPageContents($pages);
+
         return $pages;
     }
 
     public function showEditPage($id)
     {
-        $page = $this->pageOperator->getPage($id);
-        $diff = Language::count()-count($page->content);
-        if($diff>0)
-        {
-            for($i = 0; $i<$diff;$i++)
-            {
-                $page->content->push("");
+        $activeLanguageId = Language::whereActive(1)->lists('id');
+        $page = $this->pageOperator->getPage($id,$activeLanguageId);
 
+        if($page->page_type == "single")
+        {
+            $diff = Language::whereActive(1)->count()-count($page->content);
+            if($diff>0)
+            {
+                for($i = 0; $i<$diff;$i++)
+                {
+                    $page->content->push("");
+                }
             }
         }
+
+        $page = $this->fetchMetadata($page);
+
+        $page = $this->fetchPageContents($page);
         return $page;
     }
 
@@ -167,7 +179,7 @@ class PageServices
      * @param $result
      * @return array
      */
-    protected function updatePageContent($inputs, $language_id, PageContent $result, $page)
+    private function updatePageContent($inputs, $language_id, PageContent $result, $page)
     {
         foreach ($inputs['title'] as $lang_id => $title) {
             if ($lang_id == $language_id) {
@@ -193,5 +205,60 @@ class PageServices
 
 //        return [$lang_id, $title, $content, $status];
         return true;
+    }
+
+    /**
+     * @param $pages
+     */
+    private function fetchMetadata($pages)
+    {
+        if(count($pages)>1){
+            foreach ($pages as $page) {
+                foreach ($page->metadata as $metadata) {
+                    $page->metadata[$metadata->meta_key] = $metadata->meta_value;
+                }
+            }
+        }elseif(count($pages)==1)
+        {
+            foreach ($pages->metadata as $metadata) {
+                $pages->metadata[$metadata->meta_key] = $metadata->meta_value;
+            }
+        }
+
+        return $pages;
+    }
+
+    /**
+     * @param $page
+     */
+    protected function fetchPageContents($pages)
+    {
+        if(count($pages)>1)
+        {
+            $temp = [];
+         foreach($pages as $page)
+         {
+
+             foreach ($page->content as $content) {
+                 $temp[$content->content_type][] = $content;
+
+             }
+             foreach ($temp as $key => $value) {
+                 $page->content->put($key, $value);
+                 $temp = [];
+             }
+         }
+        }elseif(count($pages)==1){
+            $temp = [];
+            foreach ($pages->content as $content) {
+                $temp[$content->content_type][] = $content;
+
+            }
+            foreach ($temp as $key => $value) {
+                $pages->content->put($key, $value);
+            }
+        }
+
+        return $pages;
     }
 }

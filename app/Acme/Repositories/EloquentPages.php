@@ -79,7 +79,7 @@ class EloquentPages implements PagesInterface
 	{
 		return Page::with(['content'=>function($query){
 			$query->whereContent_type('single');
-		}])->get();
+		}, 'metadata'])->get();
 	}
 
 	public function getAllActiveSinglePages()
@@ -89,9 +89,24 @@ class EloquentPages implements PagesInterface
 		},'metadata'])->get();
 	}
 
-	public function getPage($identificaton_resources)
+	public function getPage($identificaton_resources, $activeLangId=null)
 	{
-		return Page::with('content')->findOrFail($identificaton_resources);
+		if($activeLangId){
+			return Page::with(['content'=>function($query)use($activeLangId){
+				$query->whereIn('lang_id', $activeLangId)->orderBy('identifier');
+			}, 'metadata'])->findOrFail($identificaton_resources);
+		}
+		return Page::with(['content'=>function($query)use($activeLangId){
+			$query->orderBy('identifier');
+		}, 'metadata'])->findOrFail($identificaton_resources);
+
+	}
+
+	public function getPageWithSingleContent($identificaton_resources)
+	{
+		return Page::with(['content'=>function($query){
+			$query->whereContent_type('single');
+		}, 'metadata'])->findOrFail($identificaton_resources);
 	}
 
 	public function getAllPagesWhereLangIdIs($data)

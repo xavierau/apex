@@ -2,9 +2,9 @@
     <img class="logo" src="{{asset('assets/imgs/logo-bg.jpg')}}"/>
     <div class="lang-links pull-right">
         <ol class="breadcrumb pull-right">
-          <li><a href="{{route('setLang','zh-Hant')}}">繁體</a></li>
-          <li><a href="{{route('setLang','zh-Hans')}}">簡體</a></li>
-          <li><a href="{{route('setLang','en')}}">English</a></li>
+            @foreach(Cache::get('languages') as $language)
+                <li><a href="{{route('setLang',$language['iso_code'])}}">{{$language['language']}}</a></li>
+            @endforeach
         </ol>
         <span class="pull-right">
             {{Lang::get('frontEndPages.hotline')}}（+852）2682 8516

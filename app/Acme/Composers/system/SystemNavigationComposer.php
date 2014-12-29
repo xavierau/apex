@@ -9,25 +9,26 @@
 namespace Acme\Composers\system;
 
 
-use Acme\Models\Page;
+use Acme\Models\Message;
 use Cache;
 
 class SystemNavigationComposer {
-    protected $pages;
 
-    function __construct(Page $pages)
+    private $message;
+
+    function __construct(Message $message)
     {
-        $this->pages = $pages;
+        $this->message = $message;
     }
 
-
     public function compose($view){
-//        $allPages = $this->pages->all();
-//        foreach($allPages as $page)
-//        {
-//            $title[$page->id] = $page->title()->whereLang_id(1)->first()->title;
-//        }
-//        $view->with('pages', $allPages)->with('title',$title);
+
+        $newMessages = $this->getNewMessage();
+        $view->with('messages', $newMessages);
+    }
+
+    private function getNewMessage(){
+        return $this->message->whereStatus("NEW")->get();
     }
 
 }

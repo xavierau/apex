@@ -9,18 +9,16 @@
 namespace Acme\Composers\front;
 
 
-use Acme\Models\Page;
-use Session;
+use Cache;
 
 class AboutComposer extends BaseFrontEndComposer{
 
     public function compose($view)
     {
+        $data = $this->getPageSingleContent('about');
 
-        $page = Page::whereUrl('about')->first();
-        $content = $page->content()->whereLang_id(Session::get($this->key))->first();
-
-//        dd(Session::get($this->key));
-        $view->with(compact('content'));
+        $view->withContent($data['contents'])->withLayout($data['layout'])->withMedias($data['medias']);
     }
+
+
 } 

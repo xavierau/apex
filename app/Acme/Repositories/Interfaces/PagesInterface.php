@@ -23,4 +23,6 @@ interface PagesInterface
 
 	public function getAllActiveSinglePages();
 
+	public function getPageWithSingleContent($id);
+
 } // END interface UsersInterface

@@ -2,6 +2,23 @@
 
 class PageContentsController extends \BaseController {
 
+	/**
+	 * @var PageContent
+	 */
+	private $pageContent;
+	public $message;
+
+	function __construct(PageContent $pageContent )
+	{
+		$this->pageContent = $pageContent;
+		$this->viewPrefix = "system.pageContent";
+		$this->routePrefix = "admin.pageContent";
+
+		View::share("viewPrefix", $this->viewPrefix);
+		View::share("routePrefix", $this->routePrefix);
+
+		parent::__construct();
+	}
 
 	/**
 	 * Display a listing of the resource.
@@ -12,6 +29,18 @@ class PageContentsController extends \BaseController {
 	public function index()
 	{
 		//
+//		dd(Input::get('page'));
+		$contents = $this->pageContent->where('content_type','!=','single')->with('page')->get();
+		$temp=[];
+		foreach($contents as $content)
+		{
+			if($content->page->url == Input::get('page'))
+			{
+				$temp[$content->identifier][] = $content;
+			}
+		}
+		$contents = $temp;
+		return View::make($this->viewPrefix.'.index')->withContents($contents);
 	}
 
 	/**
@@ -55,9 +84,22 @@ class PageContentsController extends \BaseController {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function edit($id)
+	public function edit($identifier)
 	{
 		//
+
+		$pageContent = $this->pageContent->with('page')->whereIdentifier($identifier)->get();
+
+		$diff = Language::count()-count($pageContent);
+
+		if($diff>0)
+		{
+			for($i = 0; $i<$diff;$i++)
+			{
+				$pageContent->push("");
+			}
+		}
+		return View::make($this->viewPrefix.'.edit')->with(compact('pageContent'));
 	}
 
 	/**
@@ -67,9 +109,43 @@ class PageContentsController extends \BaseController {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function update($id)
+	public function update($pageId)
 	{
 		//
+		$inputs = Input::all();
+
+		$page = Acme\Models\Page::with(['content'=>function($query)use($inputs){
+			$query->whereIdentifier($inputs['identifier']);
+		}])->whereId($pageId)->first();
+
+		$pageContent = $page->content;
+
+		$allLanguagesId = Language::lists('id');
+		$languages = Language::all();
+
+		foreach($languages as $language)
+		{
+			foreach($pageContent as $result) {
+				if ($language->id == $result->lang_id) {
+					$this->updatePageContent($inputs, $language->id, $result);
+					unset($allLanguagesId[array_search($language->id, $allLanguagesId)]);
+				}
+			}
+		}
+
+		if(count($allLanguagesId)>0)
+		{
+			foreach($allLanguagesId as $key=>$language_id)
+			{
+				$result = new PageContent();
+
+				$this->updatePageContent($inputs, $language_id, $result, $page);
+			}
+		}
+
+		$this->message = $page->url ." has been update!";
+		Cache::flush();
+		return Redirect::route('admin.pages.index');
 	}
 
 	/**
@@ -82,6 +158,30 @@ class PageContentsController extends \BaseController {
 	public function destroy($id)
 	{
 		//
+	}
+
+	public function updatePageContent($inputs, $lang_id, $content, $page=null){
+
+		if($page == null)
+		{
+			$content->content = $inputs['content'][$lang_id];
+			$content->status = $inputs['status'][$lang_id];
+			$content->title = $inputs['title'][$lang_id];
+			$content->save();
+		}else{
+			$content->page_id = $page->id;
+			$content->identifier = $inputs['identifier'];
+			$content->lang_id = $lang_id;
+			$content->content_type = $page->metadata()->whereMeta_key('page_type')->first()->meta_value;
+			$content->content = $inputs['content'][$lang_id];
+			$content->title = $inputs['title'][$lang_id];
+			$content->status = $inputs['status'][$lang_id];
+			$content->save();
+
+		}
+
+
+
 	}
 
 }

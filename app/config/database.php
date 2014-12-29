@@ -54,10 +54,10 @@ return array(
 
 		'mysql' => array(
 			'driver'    => 'mysql',
-			'host'      => '128.199.230.226',
-			'database'  => 'forge',
-			'username'  => 'forge',
-			'password'  => '5Gm3iOqzrgEjrtlEpGKb',
+			'host'      => 'localhost',
+			'database'  => 'apexadmin_db',
+			'username'  => 'apexadmin_user',
+			'password'  => '9HxKXYFe',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',

@@ -3,7 +3,7 @@
 @section('content')
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header">All Pages <a href="{{route('admin.menus.create')}}" class="btn btn-success pull-right"><i class="fa fa-plus"></i> Create New</a> </h1>
+            <h1 class="page-header">All Pages </h1>
         </div>
     </div>
     <div class="row">
@@ -24,7 +24,7 @@
                             <tr>
                                 @foreach($languages as $language)
                                         <td>
-                                            @foreach($page->content as $content)
+                                            @foreach($page->content->get('single') as $content)
                                                 @if($content->lang_id == $language->id)
                                                     {{$content->title}}
                                                 @endif
@@ -34,7 +34,7 @@
                                 <td>{{$page->url}}</td>
                                 <td>{{$page->active == 1 ? "Active":"Not Active"}}</td>
                                 <td>
-                                    <a href="{{route('admin.pages.edit',$page->id)}}" class="btn btn-info"> Edit</a>
+                                    <a href="{{route($routePrefix.'.edit',$page->id)}}" class="btn btn-info"> Edit</a>
                                 </td>
                             </tr>
                             @endforeach

@@ -1,5 +1,5 @@
         <footer>
-           <p>&copy; A & A Creation 2014</p>
+           <p>&copy; </p>
         </footer>
 
     @include('system.partials.blocks.js')
