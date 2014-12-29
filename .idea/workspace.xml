@@ -75,11 +75,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="session.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/config/session.php">
+      <file leaf-file-name="header.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/front/partials/header.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.31839624" vertical-offset="0" max-vertical-offset="2190">
-              <caret line="18" column="23" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
+            <state vertical-scroll-proportion="0.070754714" vertical-offset="0" max-vertical-offset="848">
+              <caret line="4" column="40" selection-start-line="4" selection-start-column="40" selection-end-line="4" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -127,7 +127,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/views/front/pages/about.blade.php" />
         <option value="$PROJECT_DIR$/app/Acme/Composers/front/LandingPageComposer.php" />
         <option value="$PROJECT_DIR$/app/Acme/Composers/front/AboutComposer.php" />
         <option value="$PROJECT_DIR$/app/Acme/Composers/front/ImmigrationComposer.php" />
@@ -178,6 +177,7 @@
         <option value="$PROJECT_DIR$/app/Acme/Composers/front/IndexComposer.php" />
         <option value="$PROJECT_DIR$/app/views/front/pages/index-temp.blade.php" />
         <option value="$PROJECT_DIR$/app/config/session.php" />
+        <option value="$PROJECT_DIR$/app/views/front/partials/header.blade.php" />
       </list>
     </option>
   </component>
@@ -737,13 +737,6 @@
     </PATH>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/routes/system.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.29761904" vertical-offset="0" max-vertical-offset="1035">
-          <caret line="15" column="62" selection-start-line="15" selection-start-column="62" selection-end-line="15" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/front/partials/blocks/js.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.03968254" vertical-offset="0" max-vertical-offset="756">
@@ -1123,6 +1116,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/session.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.31839624" vertical-offset="0" max-vertical-offset="2190">
+          <caret line="18" column="23" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/front/pages/index-temp.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-17.833334" vertical-offset="37" max-vertical-offset="1170">
@@ -1131,10 +1132,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/session.php">
+    <entry file="file://$PROJECT_DIR$/app/views/front/partials/header.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.31839624" vertical-offset="0" max-vertical-offset="2190">
-          <caret line="18" column="23" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
+        <state vertical-scroll-proportion="0.070754714" vertical-offset="0" max-vertical-offset="848">
+          <caret line="4" column="40" selection-start-line="4" selection-start-column="40" selection-end-line="4" selection-end-column="40" />
           <folding />
         </state>
       </provider>
