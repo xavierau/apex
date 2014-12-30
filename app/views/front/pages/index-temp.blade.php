@@ -23,7 +23,7 @@
                                         @endif
                                         <div class="col-xs-6">
                                             <div class="summary">
-                                                <img src="{{asset('assets/imgs/italy.jpg')}}" alt=""/>
+                                                <img src="{{asset("assets/imgs/$immigration->identifier.jpg")}}" alt=""/>
                                                 <div class="summary">
                                                     <h5 class="heading">{{$immigration->title}}</h5>
                                                     <div class="index-content">
