@@ -26,6 +26,7 @@
                                                 <img src="{{asset("assets/imgs/$immigration->identifier.jpg")}}" alt=""/>
                                                 <div class="summary">
                                                     <h5 class="heading">{{$immigration->title}}</h5>
+                                                    <span class="border-bottom"></span>
                                                     <div class="index-content">
                                                         {{$immigration->content}}
                                                     </div>
