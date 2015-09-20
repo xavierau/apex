@@ -81,7 +81,7 @@
       });
 
       var ajax = $.ajax({
-          type: "POST",
+          method: "POST",
           url: url,
           data: data,
           dataType: "json"
