@@ -18,6 +18,7 @@ class CreateLanguagesTable extends Migration {
 			$table->string('language');
 			$table->string('iso_code');
 			$table->tinyInteger('default');
+			$table->tinyInteger('active');
 			$table->timestamps();
 		});
 	}

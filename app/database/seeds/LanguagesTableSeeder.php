@@ -11,15 +11,9 @@ class LanguagesTableSeeder extends Seeder {
         Language::create([
             "language"=> "English",
             "iso_code"=> "en",
+            "active"=> 1,
+            "default"=> 1,
         ]);
-
-//		foreach(range(1, 10) as $index)
-//		{
-//			Language::create([
-//                "language"=> "US English",
-//                "iso_code"=> "en_us",
-//            ]);
-//		}
 	}
 
 }

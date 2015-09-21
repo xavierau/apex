@@ -29,7 +29,7 @@ class BaseFrontEndComposer
     {
 
         $langId = Session::get($this->key);
-//        Cache::forget("page_{$langId}_{$url}");
+        Cache::forget("page_{$langId}_{$url}");
         return $data = Cache::rememberForever("page_{$langId}_{$url}", function()use($url){
 
             $page = Page::whereUrl($url)->with(['content' => function ($query) {
@@ -63,7 +63,7 @@ class BaseFrontEndComposer
             'identifier'=>$identifier
         ];
 
-//        Cache::forget("page_{$langId}_{$url}_{$identifier}");
+        Cache::forget("page_{$langId}_{$url}_{$identifier}");
          $data = Cache::rememberForever("page_{$langId}_{$url}_{$identifier}", function()use($var){
             $page = Page::with(['content' => function ($query) {
                 $query->whereLang_id(Session::get('langId'))->whereContent_type('structural')->whereStatus('published');

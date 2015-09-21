@@ -44,3 +44,7 @@
         "as" => "send message",
         "uses" => "MessagesController@sendMessage"
     ])->before("csrf_Ajax");
+    Route::post('contact', [
+        "as" => "send message",
+        "uses" => "MessagesController@sendMessage"
+    ])->before("csrf_Ajax");
