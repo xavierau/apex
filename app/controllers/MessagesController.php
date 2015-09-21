@@ -90,7 +90,7 @@
 
 		Mail::send('emails.contact', $data, function($message)
 		{
-			$message->to('xavier.au@anacreation.com', 'Apex')->subject('Website Enquiry!');
+			$message->to('nfo@apexconsultancy.com.hk', 'Apex')->subject('Website Enquiry!');
 		});
 
 		return Response::json(['response'=>"done",'contactme'=>Input::get('contactme')]);
