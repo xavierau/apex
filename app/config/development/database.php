@@ -7,7 +7,7 @@ return array(
 			'mysql' => array(
 				'driver'    => 'mysql',
 				'host'      => 'localhost',
-				'database'  => 'apex',
+				'database'  => 'forge',
 				'username'  => 'forge',
 				'password'  => '5Gm3iOqzrgEjrtlEpGKb',
 				'charset'   => 'utf8',
