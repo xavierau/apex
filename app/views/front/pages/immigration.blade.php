@@ -6,7 +6,7 @@
         <img src="{{asset('assets/imgs/immigration_banner.jpg')}}" alt=""/>
     </div>
     <div class="col-xs-3">
-        @include("front.partials.leftSidebarAll")
+        @include("front.partials.leftSideBarAll")
     </div>
     <div class="col-xs-9">
         <section class="content" style="background-image: url('{{asset('assets/imgs/immigration_background.jpg')}}')">
