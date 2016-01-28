@@ -4,6 +4,7 @@
     <style>
         div.list{
             color:white;
+            background-color: #096738;
         }
         div.list>div.text-center{
             margin-top: 30px;
