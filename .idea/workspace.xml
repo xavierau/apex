@@ -25,9 +25,14 @@
       <file leaf-file-name="index-temp.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/front/pages/index-temp.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.62447846">
-              <caret line="94" column="55" selection-start-line="94" selection-start-column="55" selection-end-line="94" selection-end-column="55" />
-              <folding />
+            <state vertical-scroll-proportion="0.5410292">
+              <caret line="118" column="0" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
+              <folding>
+                <element signature="e#537#725#0#HTML" expanded="false" />
+                <element signature="e#746#2298#0#HTML" expanded="false" />
+                <element signature="e#2319#6044#0#HTML" expanded="false" />
+                <element signature="e#6065#7323#0#HTML" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -966,9 +971,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/front/pages/index-temp.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.62447846">
-          <caret line="94" column="55" selection-start-line="94" selection-start-column="55" selection-end-line="94" selection-end-column="55" />
-          <folding />
+        <state vertical-scroll-proportion="0.5410292">
+          <caret line="118" column="0" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
+          <folding>
+            <element signature="e#537#725#0#HTML" expanded="false" />
+            <element signature="e#746#2298#0#HTML" expanded="false" />
+            <element signature="e#2319#6044#0#HTML" expanded="false" />
+            <element signature="e#6065#7323#0#HTML" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -116,8 +116,6 @@
                             <h4>更多資訊 請致電 ( +852 ) 2682 8516</h4>
                         </div>
                     </div>
-
-                    @include('front.partials.indexBox')
                 </div>
             </div>
         </div>
