@@ -92,7 +92,7 @@
                                             src="{{asset('assets/imgs/cyprus-sm.jpg')}}" alt="" /></a></li>
                         </ul>
                     </div>
-                    <div class="col-xs-12 list">
+                    <div class="col-xs-12 list clearfix">
                         <div class="col-xs-4 text-center">
                             <div class="text-center">升學顧問 </div>
                             <div class="">
