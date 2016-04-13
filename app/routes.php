@@ -12,10 +12,7 @@
     */
 
     Event::listen('Acme.*', 'Acme\Listeners\RearrangeOrder');
-//    Event::listen('illuminate.query',function($query){var_dump($query);});
 
-//    Session::flush();
-//    Cache::flush();
 
     foreach (File::allFiles(__DIR__.'/routes') as $partial) {
         require_once($partial->getPathName());
