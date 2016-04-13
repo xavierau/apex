@@ -11,7 +11,7 @@ class UsersController extends \BaseController {
 		$this->user = $user;
 
 		View::share("path", "system.users");
-		View::share("URL", route('users.index'));
+		View::share("URL", route('admin.users.index'));
 	}
 
 	/**
