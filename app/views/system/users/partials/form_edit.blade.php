@@ -14,9 +14,9 @@
 	{{$errors->first('email', '<span class="errors"> :message </span>')}}
 </div>
 <div class="form-group">
-	{{Form::label('username', "User Name")}}
-	{{Form::text('username', null, ["class"=>"form-control", "required"])}}
-	{{$errors->first('username', '<span class="errors"> :message </span>')}}
+	{{Form::label('password', "User Name")}}
+	{{Form::password('password', null, ["class"=>"form-control", "required"])}}
+	{{$errors->first('password', '<span class="errors"> :message </span>')}}
 </div>
 {{Form::submit('Update', ["class" => "btn btn-block btn-success" , "id" => "edit-confirm-button"])}}
 <a href="{{route('users.index')}}" class="btn btn-info btn-block">Back</a>
