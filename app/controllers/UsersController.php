@@ -105,7 +105,6 @@
             //
             $inputs = Input::all();
             $rules  = [
-                "email"    => "required",
                 "password" => "required|min:3"
             ];
 
