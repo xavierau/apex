@@ -15,7 +15,7 @@
 </div>
 <div class="form-group">
 	{{Form::label('password', "User Name")}}
-	{{Form::password('password', null, ["class"=>"form-control", "required"])}}
+	{{Form::password('password', ["class"=>"form-control", "required"])}}
 	{{$errors->first('password', '<span class="errors"> :message </span>')}}
 </div>
 {{Form::submit('Update', ["class" => "btn btn-block btn-success" , "id" => "edit-confirm-button"])}}
