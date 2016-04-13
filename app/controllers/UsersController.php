@@ -112,10 +112,12 @@
 
             if ($validator->fails()) {
                 return Redirect::back()->withInput()->withErrors($validator->messages);
-
             }
+            $data = [
+              'password' => Hash::make($inputs['password'])
+            ];
             $user = User::find($id);
-            $user->update($inputs);
+            $user->update($data);
             $message = "Successfully updated!";
 
             return Redirect::route("home")->withMessage($message);
