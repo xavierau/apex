@@ -19,4 +19,3 @@
 	{{$errors->first('password', '<span class="errors"> :message </span>')}}
 </div>
 {{Form::submit('Update', ["class" => "btn btn-block btn-success" , "id" => "edit-confirm-button"])}}
-<a href="{{route('users.index')}}" class="btn btn-info btn-block">Back</a>
