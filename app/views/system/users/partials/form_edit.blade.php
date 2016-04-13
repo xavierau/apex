@@ -10,7 +10,7 @@
 </div>
 <div class="form-group">
 	{{Form::label('email', "Email")}}
-	{{Form::email('email', null, ["class"=>"form-control", "disabled"])}}
+	{{Form::text('email', null, ["class"=>"form-control", "disabled"])}}
 	{{$errors->first('email', '<span class="errors"> :message </span>')}}
 </div>
 <div class="form-group">
