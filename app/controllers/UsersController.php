@@ -6,9 +6,9 @@ class UsersController extends \BaseController {
 
 	protected $user;
 	
-	function __construct(UsersServices $user)
+	function __construct()
 	{
-		$this->user = $user;
+		$this->user = new User();
 
 		View::share("path", "system.users");
 		View::share("URL", route('admin.users.index'));
