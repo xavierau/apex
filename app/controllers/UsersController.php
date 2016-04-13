@@ -12,7 +12,7 @@ class UsersController extends \BaseController {
 
 		View::share("path", "system.users");
 		View::share("URL", route('admin.users.index'));
-		View::share("routePrefix", route('admin.users'));
+		View::share("routePrefix", route('admin.users.index'));
 	}
 
 	/**
