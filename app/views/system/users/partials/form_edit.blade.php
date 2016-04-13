@@ -14,7 +14,7 @@
 	{{$errors->first('email', '<span class="errors"> :message </span>')}}
 </div>
 <div class="form-group">
-	{{Form::label('password', "User Name")}}
+	{{Form::label('password', "Password")}}
 	{{Form::password('password', ["class"=>"form-control", "required"])}}
 	{{$errors->first('password', '<span class="errors"> :message </span>')}}
 </div>
