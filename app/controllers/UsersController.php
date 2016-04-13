@@ -83,7 +83,8 @@ class UsersController extends \BaseController {
 	public function edit($id)
 	{
 		//
-		$user = $this->user->getUser($id);
+//		$user = $this->user->getUser($id);
+		$user = User::find($id);
 		return View::make('system.users.edit', compact("user"));
 	}
 
