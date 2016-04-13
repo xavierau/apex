@@ -1,13 +1,13 @@
-<div class="form-group">
-	{{Form::label('firstname', "First Name")}}
-	{{Form::text('firstname', null, ["class"=>"form-control", "required"])}}
-	{{$errors->first('firstname', '<span class="errors"> :message </span>')}}
-</div>
-<div class="form-group">
-	{{Form::label('lastname', "Last Name")}}
-	{{Form::text('lastname', null, ["class"=>"form-control", "required"])}}
-	{{$errors->first('lastname', '<span class="errors"> :message </span>')}}
-</div>
+{{--<div class="form-group">--}}
+	{{--{{Form::label('firstname', "First Name")}}--}}
+	{{--{{Form::text('firstname', null, ["class"=>"form-control", "required"])}}--}}
+	{{--{{$errors->first('firstname', '<span class="errors"> :message </span>')}}--}}
+{{--</div>--}}
+{{--<div class="form-group">--}}
+	{{--{{Form::label('lastname', "Last Name")}}--}}
+	{{--{{Form::text('lastname', null, ["class"=>"form-control", "required"])}}--}}
+	{{--{{$errors->first('lastname', '<span class="errors"> :message </span>')}}--}}
+{{--</div>--}}
 <div class="form-group">
 	{{Form::label('email', "Email")}}
 	{{Form::text('email', null, ["class"=>"form-control", "disabled"])}}
