@@ -112,7 +112,7 @@
             $validator = Validator::make($inputs, $rules);
 
             if ($validator->fails()) {
-                return Redirect::back()->withInput()->withErrors($validator->errors);
+                return Redirect::back()->withInput()->withErrors($validator->messages);
 
             }
             $user = User::find($id);
