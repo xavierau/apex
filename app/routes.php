@@ -13,10 +13,6 @@
 
     Event::listen('Acme.*', 'Acme\Listeners\RearrangeOrder');
 
-    $user = User::first();
-    $user->password = Hash::make("passWOrd");
-    $user->save();
-
     foreach (File::allFiles(__DIR__.'/routes') as $partial) {
         require_once($partial->getPathName());
     }
