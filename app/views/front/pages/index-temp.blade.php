@@ -83,7 +83,7 @@
                                             src="{{asset('assets/imgs/singapore-sm.jpg')}}" alt="" /></a></li>
                             <li><a href="{{route('immigration','italy')}}"><p>意大利</p><img
                                             src="{{asset('assets/imgs/italy-sm.jpg')}}" alt="" /></a></li>
-                            <li><a href="{{route('immigration','cananda')}}"><p>加拿大 </p><img
+                            <li><a href="{{route('immigration','canada')}}"><p>加拿大 </p><img
                                             src="{{asset('assets/imgs/canada-sm.jpg')}}" alt="" /></a></li>
                             <li><a href="{{route('immigration','holland')}}"><p>荷蘭</p><img
                                             src="{{asset('assets/imgs/holland-sm.jpg')}}" alt="" /></a></li>

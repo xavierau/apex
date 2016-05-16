@@ -1,5 +1,5 @@
 <header>
-    <img class="logo" src="{{asset('assets/imgs/logo-bg.jpg')}}"/>
+    <img class="logo" src="{{asset('assets/imgs/logo-new.png')}}"/>
     <div class="lang-links pull-right">
         <ol class="breadcrumb pull-right">
             @foreach(Cache::get('languages') as $language)

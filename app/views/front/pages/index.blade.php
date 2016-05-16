@@ -57,7 +57,7 @@
                                     <li><a href="{{route('immigration','spain')}}"><p>西班牙</p><img src="{{asset('assets/imgs/spain-sm.jpg')}}" alt=""/></a></li>
                                     <li><a href="{{route('immigration','singapore')}}"><p>新加坡</p><img src="{{asset('assets/imgs/singapore-sm.jpg')}}" alt=""/></a></li>
                                     <li><a href="{{route('immigration','italy')}}"><p>意大利</p><img src="{{asset('assets/imgs/italy-sm.jpg')}}" alt=""/></a></li>
-                                    <li><a href="{{route('immigration','cananda')}}"><p>加拿大 </p><img src="{{asset('assets/imgs/canada-sm.jpg')}}" alt=""/></a></li>
+                                    <li><a href="{{route('immigration','canada')}}"><p>加拿大 </p><img src="{{asset('assets/imgs/canada-sm.jpg')}}" alt=""/></a></li>
                                     <li><a href="{{route('immigration','holland')}}"><p>荷蘭</p><img src="{{asset('assets/imgs/holland-sm.jpg')}}" alt=""/></a></li>
                                     <li><a href="{{route('immigration','saipan')}}"><p>塞班島</p><img src="{{asset('assets/imgs/saipan-sm.jpg')}}" alt=""/></a></li>
                                     <li><a href="{{route('immigration','cyprus')}}"><p>浦路斯</p><img src="{{asset('assets/imgs/cyprus-sm.jpg')}}" alt=""/></a></li>
